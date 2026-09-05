@@ -252,9 +252,6 @@ html.js h1 .pal{display:inline-block;opacity:0;transform:translateY(.55em) rotat
 html.js h1 .dot{display:inline-block;opacity:0;animation:punto .5s cubic-bezier(.5,1.6,.4,1) forwards;animation-delay:calc(.07s * var(--i) + .15s)}
 @keyframes caer{to{opacity:1;transform:none}}
 @keyframes punto{0%{opacity:0;transform:translateY(-.8em) scale(1.6)}70%{opacity:1;transform:translateY(.06em) scale(.95)}100%{opacity:1;transform:none}}
-.word-cycle{display:inline-block;transition:opacity .22s ease}
-.word-cycle.swap{opacity:0}
-@media(prefers-reduced-motion:reduce){.word-cycle{transition:none}}
 html.js .rev{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,.8,.36,1)}
 html.js .rev.vis{opacity:1;transform:none}
 html.js .rev:nth-child(2){transition-delay:.07s}
@@ -571,48 +568,6 @@ html [data-es]{transition:opacity .18s ease}
 </footer>
 
 <script>
-// ── "software" cambia de tipografía, sin mover el texto de al lado ──
-var CICLO_FUENTES=[
-  {family:'"Bricolage Grotesque",sans-serif',weight:'800',style:'normal',spacing:'-.02em',escala:1},
-  {family:'"JetBrains Mono",monospace',weight:'700',style:'normal',spacing:'-.02em',escala:.85},
-  {family:'"Space Grotesk",sans-serif',weight:'700',style:'normal',spacing:'-.01em',escala:.96},
-  {family:'"DM Mono",monospace',weight:'500',style:'normal',spacing:'0',escala:.88}
-];
-var cicloTimer=null;
-function medirAncho(texto,cfg,fontPx){
-  var tmp=document.createElement('span');
-  tmp.style.cssText='position:absolute;visibility:hidden;white-space:nowrap;top:-999px;left:-999px';
-  tmp.style.fontFamily=cfg.family;
-  tmp.style.fontWeight=cfg.weight;
-  tmp.style.fontStyle=cfg.style;
-  tmp.style.letterSpacing=cfg.spacing;
-  tmp.style.fontSize=(fontPx*cfg.escala)+'px';
-  tmp.textContent=texto;
-  document.body.appendChild(tmp);
-  var w=tmp.getBoundingClientRect().width;
-  document.body.removeChild(tmp);
-  return w;
-}
-// reserva el ancho máximo de "software" ANTES de que el titular caiga, para que
-// la palabra siguiente ("a"/"built") no salte de posición después de asentarse
-function fijarAnchoSoftware(){
-  var h1=document.querySelector('.hero h1');
-  var span=[].slice.call(document.querySelectorAll('.hero h1 .pal')).find(function(p){
-    return p.textContent.trim().toLowerCase()==='software';
-  });
-  if(!h1||!span) return null;
-  span.classList.add('word-cycle');
-  var texto=span.textContent;
-  var fontPx=parseFloat(getComputedStyle(h1).fontSize);
-  var maxAncho=0;
-  CICLO_FUENTES.forEach(function(cfg){
-    var w=medirAncho(texto,cfg,fontPx);
-    if(w>maxAncho) maxAncho=w;
-  });
-  span.style.minWidth=Math.ceil(maxAncho)+'px';
-  return {span:span,fontPx:fontPx};
-}
-
 // ── titular palabra por palabra ──
 function cascada(){
   var h = document.querySelector('.hero h1');
@@ -622,40 +577,8 @@ function cascada(){
   h.innerHTML = palabras.map(function(w,i){
     return '<span class="pal" style="--i:'+i+'">'+w+'</span>';
   }).join(' ') + '<span class="dot" style="--i:'+palabras.length+'">.</span>';
-  fijarAnchoSoftware();
 }
 cascada();
-
-function iniciarCicloSoftware(){
-  if(cicloTimer){ clearInterval(cicloTimer); cicloTimer=null; }
-  var datos=fijarAnchoSoftware();
-  if(!datos) return;
-  var span=datos.span, fontPx=datos.fontPx, i=0;
-  function aplica(cfg){
-    span.style.fontFamily=cfg.family;
-    span.style.fontWeight=cfg.weight;
-    span.style.fontStyle=cfg.style;
-    span.style.letterSpacing=cfg.spacing;
-    span.style.fontSize=(fontPx*cfg.escala)+'px';
-  }
-  aplica(CICLO_FUENTES[0]);
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  cicloTimer=setInterval(function(){
-    if(document.hidden) return;
-    span.classList.add('swap');
-    setTimeout(function(){
-      i=(i+1)%CICLO_FUENTES.length;
-      aplica(CICLO_FUENTES[i]);
-      span.classList.remove('swap');
-    },220);
-  },1700);
-}
-setTimeout(iniciarCicloSoftware,900);
-var resizeCicloTimer=null;
-addEventListener('resize',function(){
-  clearTimeout(resizeCicloTimer);
-  resizeCicloTimer=setTimeout(iniciarCicloSoftware,200);
-},{passive:true});
 
 // ── revelar al hacer scroll ──
 (function(){
@@ -705,7 +628,6 @@ btn.addEventListener('click',function(){
       if(v!=null) el.placeholder = v;
     });
     cascada();
-    setTimeout(iniciarCicloSoftware,700);
     document.documentElement.classList.remove('lang-cambia');
   },190);
 });
