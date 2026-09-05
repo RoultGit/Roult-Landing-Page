@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Roult · Software a medida y SaaS para tu empresa | LatAm · US</title>
+<title>Roult · Software a medida y SaaS para su empresa | LatAm · US</title>
 <meta name="description" content="Desarrollo de software a medida y suscripciones SaaS para mypes y empresas medianas en Latinoamérica y Estados Unidos.">
 <link rel="canonical" href="https://roult.com/">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://roult.com/">
-<meta property="og:title" content="Roult · Software a medida y SaaS para tu empresa">
+<meta property="og:title" content="Roult · Software a medida y SaaS para su empresa">
 <meta property="og:description" content="Desarrollo de software a medida y una suite de productos SaaS por suscripción para mypes y empresas medianas.">
 <meta property="og:image" content="https://roult.com/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter+Tight:wght@400;500;600&family=DM+Mono:wght@400;500&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Roult","description":"Desarrollo de software a medida y suscripciones SaaS para mypes y empresas medianas de Latinoamérica y Estados Unidos.","areaServed":"LatAm & US","email":"reghuel11a@hotmail.com"}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Roult","description":"Desarrollo de software a medida y suscripciones SaaS para mypes y empresas medianas de Latinoamérica y Estados Unidos.","areaServed":"LatAm & US","email":"contact@roult.us"}
 </script>
 
 <style>
@@ -49,8 +49,7 @@ body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--body);fo
 img{max-width:100%;display:block}
 a{color:inherit}
 .shell{width:var(--shell);margin-inline:auto}
-.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-40);display:flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";width:22px;height:1px;background:var(--cobalt);flex:none}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-40)}
 h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.02;margin:0}
 h2{font-size:clamp(30px,4.6vw,52px)}
 p{margin:0 0 1em}
@@ -62,7 +61,6 @@ p{margin:0 0 1em}
 header{position:sticky;top:0;z-index:50;background:rgba(241,242,237,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav{display:flex;align-items:center;gap:28px;height:64px}
 .brand{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.04em;text-decoration:none}
-.brand i{color:var(--cobalt);font-style:normal}
 .navlinks{display:flex;gap:24px;margin-left:auto;font-size:14px}
 .navlinks a{text-decoration:none;color:var(--ink-70)}
 .navlinks a:hover{color:var(--ink)}
@@ -79,7 +77,6 @@ nav{display:flex;align-items:center;gap:28px;height:64px}
 .hero .shell{position:relative;z-index:1}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
 h1{font-size:clamp(46px,6.6vw,96px);line-height:.98;margin:22px 0 22px}
-h1 .dot{color:var(--cobalt)}
 .lede{font-size:19px;color:var(--ink-70);max-width:44ch}
 .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .facts{margin-top:36px;border-top:1px solid var(--line)}
@@ -202,12 +199,12 @@ ul.tick li::before{content:"→";position:absolute;left:0;color:var(--cobalt);fo
   .product.reverse .product-copy,.product.reverse .product-shot{order:initial}
 }
 
-details{border-bottom:1px solid var(--line);padding:4px 0}
+details{border-bottom:1px solid var(--line);padding:4px 0;overflow-anchor:none}
 summary{cursor:pointer;padding:17px 0;font-weight:600;font-size:17.5px;list-style:none;display:flex;justify-content:space-between;gap:20px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-family:var(--mono);color:var(--cobalt);font-weight:400;flex:none}
+summary::after{content:"+";font-family:var(--mono);color:var(--cobalt);font-weight:400;flex:none;transition:transform .25s ease}
 details[open] summary::after{content:"−"}
-details p{color:var(--ink-70);font-size:15.5px;max-width:70ch;padding-bottom:6px}
+.faq-body>p{color:var(--ink-70);font-size:15.5px;max-width:70ch;margin:0;padding-bottom:6px}
 
 /* form */
 .form-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
@@ -219,7 +216,6 @@ details p{color:var(--ink-70);font-size:15.5px;max-width:70ch;padding-bottom:6px
 footer{background:var(--bone);border-top:1px solid var(--line);padding:26px 0;font-size:13.5px;color:var(--ink-40)}
 .foot{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
 .foot-brand{font-family:var(--display);font-weight:800;letter-spacing:-.03em;color:var(--ink);font-size:15px}
-.foot-brand i{color:var(--cobalt);font-style:normal}
 .foot-meta{margin-right:auto}
 .foot-links{display:flex;gap:20px}
 .foot-links a{color:var(--ink-70);text-decoration:none}
@@ -244,14 +240,12 @@ footer{background:var(--bone);border-top:1px solid var(--line);padding:26px 0;fo
   *{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}
   html.js .rev{opacity:1;transform:none}
-  html.js h1 .pal,html.js h1 .dot{opacity:1;transform:none}
+  html.js h1 .pal{opacity:1;transform:none}
 }
 
 /* ═══ entrada del titular ═══ */
 html.js h1 .pal{display:inline-block;opacity:0;transform:translateY(.55em) rotate(1.6deg);animation:caer .62s cubic-bezier(.2,.75,.3,1) forwards;animation-delay:calc(.07s * var(--i))}
-html.js h1 .dot{display:inline-block;opacity:0;animation:punto .5s cubic-bezier(.5,1.6,.4,1) forwards;animation-delay:calc(.07s * var(--i) + .15s)}
 @keyframes caer{to{opacity:1;transform:none}}
-@keyframes punto{0%{opacity:0;transform:translateY(-.8em) scale(1.6)}70%{opacity:1;transform:translateY(.06em) scale(.95)}100%{opacity:1;transform:none}}
 html.js .rev{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,.8,.36,1)}
 html.js .rev.vis{opacity:1;transform:none}
 html.js .rev:nth-child(2){transition-delay:.07s}
@@ -278,7 +272,7 @@ html [data-es]{transition:opacity .18s ease}
 
 <header>
   <nav class="shell">
-    <a class="brand" href="#">ROULT<i>.</i></a>
+    <a class="brand" href="#">ROULT</a>
     <div class="navlinks">
       <a href="#hacemos" data-es="Qué hacemos" data-en="What we do">Qué hacemos</a>
       <a href="#productos" data-es="Productos" data-en="Products">Productos</a>
@@ -296,16 +290,16 @@ html [data-es]{transition:opacity .18s ease}
   <div class="shell hero-grid">
     <div>
       <div class="eyebrow" data-es="Desarrollo de software para LatAm y EE.UU." data-en="Software development for LatAm and the US">Desarrollo de software para LatAm y EE.UU.</div>
-      <h1 data-es="Software a la medida de tu empresa<span class='dot'>.</span>" data-en="Software built around your company<span class='dot'>.</span>">Software a la medida de tu empresa<span class="dot">.</span></h1>
+      <h1 data-es="Software a la medida de su empresa" data-en="Software built around your company">Software a la medida de su empresa</h1>
       <p class="lede" data-es="Somos Roult. Desarrollamos software a medida y construimos una suite de productos por suscripción para mypes y empresas medianas de Latinoamérica y Estados Unidos." data-en="We're Roult. We build custom software and a suite of subscription products for small and mid-sized businesses across Latin America and the US.">Somos Roult. Desarrollamos software a medida y construimos una suite de productos por suscripción para mypes y empresas medianas de Latinoamérica y Estados Unidos.</p>
       <div class="cta-row">
-        <a class="btn" href="#contacto" data-es="Hablemos de tu proyecto" data-en="Let's talk about your project">Hablemos de tu proyecto</a>
+        <a class="btn" href="#contacto" data-es="Hablemos de su proyecto" data-en="Let's talk about your project">Hablemos de su proyecto</a>
         <a class="btn ghost" href="#productos" data-es="Ver la suite" data-en="See the suite">Ver la suite</a>
       </div>
       <div class="facts">
         <div><b>01</b><span data-es="Precio cerrado por escrito antes de empezar" data-en="Fixed price in writing before we start">Precio cerrado por escrito antes de empezar</span></div>
         <div><b>02</b><span data-es="Propuesta técnica y de alcance en 5 días hábiles" data-en="Technical scope proposal within 5 business days">Propuesta técnica y de alcance en 5 días hábiles</span></div>
-        <div><b>03</b><span data-es="Equipo remoto en LatAm y EE.UU., en tu huso horario" data-en="Remote team across LatAm and the US, in your time zone">Equipo remoto en LatAm y EE.UU., en tu huso horario</span></div>
+        <div><b>03</b><span data-es="Equipo remoto en LatAm y EE.UU., en su huso horario" data-en="Remote team across LatAm and the US, in your time zone">Equipo remoto en LatAm y EE.UU., en su huso horario</span></div>
       </div>
     </div>
 
@@ -334,7 +328,7 @@ html [data-es]{transition:opacity .18s ease}
         <path class="leader" pathLength="100" d="M315,190 L360,190 L392,190"></path>
         <circle class="punto" cx="392" cy="190" r="2.5"></circle>
       </svg>
-      <div class="medida-tag acento" style="left:50%;top:19.5%" data-es="a tu medida" data-en="built to fit">a tu medida</div>
+      <div class="medida-tag acento" style="left:50%;top:19.5%" data-es="a su medida" data-en="built to fit">a su medida</div>
       <div class="medida-tag vert" style="left:16.5%;top:47.8%" data-es="sin sorpresas" data-en="no surprises">sin sorpresas</div>
       <div class="medida-tag" style="left:81.5%;top:46%" data-es="propuesta en 5 días" data-en="proposal in 5 days">propuesta en 5 días</div>
       <div class="medida-esc" data-es="esc. 1:1" data-en="scale 1:1">esc. 1:1</div>
@@ -347,19 +341,19 @@ html [data-es]{transition:opacity .18s ease}
     <div class="sec-head rev">
       <div class="eyebrow" data-es="Qué hacemos" data-en="What we do">Qué hacemos</div>
       <h2 data-es="Dos formas de trabajar con nosotros." data-en="Two ways to work with us.">Dos formas de trabajar con nosotros.</h2>
-      <p data-es="Construimos software que se ajusta a tu operación, y una suite de productos por suscripción para lo que ya es común a cualquier negocio." data-en="We build software that fits your operation, and a subscription suite for what's already common to any business.">Construimos software que se ajusta a tu operación, y una suite de productos por suscripción para lo que ya es común a cualquier negocio.</p>
+      <p data-es="Construimos software que se ajusta a su operación, y una suite de productos por suscripción para lo que ya es común a cualquier negocio." data-en="We build software that fits your operation, and a subscription suite for what's already common to any business.">Construimos software que se ajusta a su operación, y una suite de productos por suscripción para lo que ya es común a cualquier negocio.</p>
     </div>
     <div class="two">
       <div class="pane rev">
         <div class="kicker" data-es="Parte uno" data-en="Part one">Parte uno</div>
         <h3 data-es="Software a medida" data-en="Custom software">Software a medida</h3>
         <ul class="tick">
-          <li data-es="Aplicaciones y sistemas internos hechos para cómo trabaja tu equipo, no al revés" data-en="Applications and internal systems built around how your team works, not the other way around">Aplicaciones y sistemas internos hechos para cómo trabaja tu equipo, no al revés</li>
-          <li data-es="Arquitectura pensada para crecer: hoy diez usuarios, mañana mil" data-en="Architecture designed to grow: ten users today, a thousand tomorrow">Arquitectura pensada para crecer: hoy diez usuarios, mañana mil</li>
-          <li data-es="Código, repositorio e infraestructura a tu nombre desde el día uno" data-en="Code, repository and infrastructure under your name from day one">Código, repositorio e infraestructura a tu nombre desde el día uno</li>
-          <li data-es="Integraciones con lo que ya usas: tu ERP, tu WhatsApp Business, tu pasarela de pago" data-en="Integrations with what you already use: your ERP, WhatsApp Business, payment gateway">Integraciones con lo que ya usas: tu ERP, tu WhatsApp Business, tu pasarela de pago</li>
+          <li data-es="Aplicaciones y sistemas internos diseñados en función de cómo opera su equipo" data-en="Applications and internal systems built around how your team works, not the other way around">Aplicaciones y sistemas internos diseñados en función de cómo opera su equipo</li>
+          <li data-es="Arquitectura preparada para crecer: de diez usuarios a mil, sin rediseños" data-en="Architecture designed to grow: ten users today, a thousand tomorrow">Arquitectura preparada para crecer: de diez usuarios a mil, sin rediseños</li>
+          <li data-es="Código, repositorio e infraestructura a su nombre desde el día uno" data-en="Code, repository and infrastructure under your name from day one">Código, repositorio e infraestructura a su nombre desde el día uno</li>
+          <li data-es="Integraciones con las herramientas que ya utiliza: su ERP, WhatsApp Business y pasarela de pago" data-en="Integrations with what you already use: your ERP, WhatsApp Business, payment gateway">Integraciones con las herramientas que ya utiliza: su ERP, WhatsApp Business y pasarela de pago</li>
           <li data-es="Dos rondas de ajustes incluidas antes de la entrega final" data-en="Two rounds of adjustments included before final delivery">Dos rondas de ajustes incluidas antes de la entrega final</li>
-          <li data-es="Documentación y capacitación para que tu equipo lo use sin depender de nosotros" data-en="Documentation and training so your team can run it without depending on us">Documentación y capacitación para que tu equipo lo use sin depender de nosotros</li>
+          <li data-es="Documentación y capacitación para que su equipo opere el sistema de forma autónoma" data-en="Documentation and training so your team can run it without depending on us">Documentación y capacitación para que su equipo opere el sistema de forma autónoma</li>
         </ul>
         <div class="time" data-es="PROPUESTA EN 5 DÍAS HÁBILES" data-en="PROPOSAL IN 5 BUSINESS DAYS">PROPUESTA EN 5 DÍAS HÁBILES</div>
       </div>
@@ -370,7 +364,7 @@ html [data-es]{transition:opacity .18s ease}
           <li data-es="Productos listos para usar, sin instalar ni mantener servidores" data-en="Ready-to-use products, no servers to install or maintain">Productos listos para usar, sin instalar ni mantener servidores</li>
           <li data-es="Un precio mensual por producto, sin contratos de permanencia" data-en="One monthly price per product, no long-term contracts">Un precio mensual por producto, sin contratos de permanencia</li>
           <li data-es="Actualizaciones y mejoras incluidas en la suscripción" data-en="Updates and improvements included in the subscription">Actualizaciones y mejoras incluidas en la suscripción</li>
-          <li data-es="Soporte directo con el equipo que construye el producto" data-en="Direct support from the team building the product">Soporte directo con el equipo que construye el producto</li>
+          <li data-es="Soporte directo con el equipo que desarrolla el producto" data-en="Direct support from the team building the product">Soporte directo con el equipo que desarrolla el producto</li>
           <li data-es="Cada producto con su propia plataforma y su propio precio" data-en="Each product with its own platform and its own price">Cada producto con su propia plataforma y su propio precio</li>
         </ul>
         <div class="time" data-es="PRIMER LANZAMIENTO PRÓXIMAMENTE" data-en="FIRST LAUNCH COMING SOON">PRIMER LANZAMIENTO PRÓXIMAMENTE</div>
@@ -383,7 +377,7 @@ html [data-es]{transition:opacity .18s ease}
   <div class="shell">
     <div class="sec-head rev">
       <div class="eyebrow" data-es="Suite Roult" data-en="Roult suite">Suite Roult</div>
-      <h2 data-es="Empezamos por Gastify." data-en="We started with Gastify.">Empezamos por Gastify.</h2>
+      <h2 data-es="Iniciamos la suite con Gastify." data-en="We started with Gastify.">Iniciamos la suite con Gastify.</h2>
       <p data-es="Cada producto de la suite tiene su propia plataforma, su propio precio y su propio inicio de sesión." data-en="Each product in the suite has its own platform, its own pricing and its own login.">Cada producto de la suite tiene su propia plataforma, su propio precio y su propio inicio de sesión.</p>
     </div>
 
@@ -391,14 +385,14 @@ html [data-es]{transition:opacity .18s ease}
       <div class="product-copy">
         <h3 class="product-name">Gastify</h3>
         <p class="product-tag" data-es="Rendición de gastos por WhatsApp, validada con SUNAT." data-en="Expense reporting over WhatsApp, validated against SUNAT.">Rendición de gastos por WhatsApp, validada con SUNAT.</p>
-        <p data-es="El colaborador manda la foto de su boleta por WhatsApp. Gastify la lee, la valida contra SUNAT y la deja lista para aprobar. Sin planillas, sin PDFs perdidos, sin perseguir a nadie por un comprobante." data-en="An employee sends a photo of their receipt over WhatsApp. Gastify reads it, validates it against SUNAT and gets it ready for approval. No spreadsheets, no lost PDFs, no chasing anyone for a receipt.">El colaborador manda la foto de su boleta por WhatsApp. Gastify la lee, la valida contra SUNAT y la deja lista para aprobar. Sin planillas, sin PDFs perdidos, sin perseguir a nadie por un comprobante.</p>
+        <p data-es="El colaborador envía la foto de su boleta por WhatsApp. Gastify la procesa, la valida contra SUNAT y la deja lista para su aprobación. Sin hojas de cálculo, sin comprobantes extraviados, sin gestiones adicionales para su reembolso." data-en="An employee sends a photo of their receipt over WhatsApp. Gastify reads it, validates it against SUNAT and gets it ready for approval. No spreadsheets, no lost PDFs, no chasing anyone for a receipt.">El colaborador envía la foto de su boleta por WhatsApp. Gastify la procesa, la valida contra SUNAT y la deja lista para su aprobación. Sin hojas de cálculo, sin comprobantes extraviados, sin gestiones adicionales para su reembolso.</p>
         <ul class="tick">
-          <li data-es="Boleta por WhatsApp, sin apps nuevas que instalar" data-en="Receipts over WhatsApp, no new app to install">Boleta por WhatsApp, sin apps nuevas que instalar</li>
+          <li data-es="Boleta por WhatsApp, sin aplicaciones adicionales que instalar" data-en="Receipts over WhatsApp, no new app to install">Boleta por WhatsApp, sin aplicaciones adicionales que instalar</li>
           <li data-es="Validación automática contra SUNAT" data-en="Automatic validation against SUNAT">Validación automática contra SUNAT</li>
           <li data-es="Panel de gasto por equipo y categoría, exportable a CSV" data-en="Spending dashboard by team and category, exportable to CSV">Panel de gasto por equipo y categoría, exportable a CSV</li>
         </ul>
         <div class="product-cta">
-          <a class="btn ghost sm" href="mailto:reghuel11a@hotmail.com?subject=Quiero%20una%20demo%20de%20Gastify" data-es="Agendar una demo" data-en="Book a demo">Agendar una demo</a>
+          <a class="btn ghost sm" href="mailto:contact@roult.us?subject=Quiero%20una%20demo%20de%20Gastify" data-es="Agendar una demo" data-en="Book a demo">Agendar una demo</a>
         </div>
       </div>
       <div class="product-shot">
@@ -419,14 +413,14 @@ html [data-es]{transition:opacity .18s ease}
       <div class="product-copy">
         <div class="kicker" data-es="Aprobaciones" data-en="Approvals">Aprobaciones</div>
         <h3 class="feature-title" data-es="Aprobar o rechazar, sin reunión" data-en="Approve or reject, no meeting needed">Aprobar o rechazar, sin reunión</h3>
-        <p data-es="El aprobador ve la lista de lo que le toca revisar hoy y decide ahí mismo: aprobar o rechazar. Nada de correos con fotos adjuntas ni cadenas de WhatsApp para ver quién autoriza esto." data-en="The approver sees today's list and decides right there: approve or reject. No emails with attached photos, no WhatsApp chains to figure out who signs off.">El aprobador ve la lista de lo que le toca revisar hoy y decide ahí mismo: aprobar o rechazar. Nada de correos con fotos adjuntas ni cadenas de WhatsApp para ver quién autoriza esto.</p>
+        <p data-es="El aprobador visualiza los gastos pendientes del día y decide de inmediato: aprobar o rechazar. Sin correos con fotos adjuntas ni mensajes de WhatsApp para determinar quién debe autorizar cada gasto." data-en="The approver sees today's list and decides right there: approve or reject. No emails with attached photos, no WhatsApp chains to figure out who signs off.">El aprobador visualiza los gastos pendientes del día y decide de inmediato: aprobar o rechazar. Sin correos con fotos adjuntas ni mensajes de WhatsApp para determinar quién debe autorizar cada gasto.</p>
       </div>
     </div>
 
     <div class="suite-more rev">
       <p data-es="Los demás productos de la suite siguen en desarrollo, cada uno con su propia plataforma y su propio precio." data-en="The rest of the suite is still in development, each with its own platform and its own pricing.">Los demás productos de la suite siguen en desarrollo, cada uno con su propia plataforma y su propio precio.</p>
       <div class="suite-cta">
-        <a class="btn ghost" href="mailto:reghuel11a@hotmail.com?subject=Av%C3%ADsenme%20cuando%20lancen%20un%20SaaS" data-es="Avísame cuando lancen" data-en="Notify me at launch">Avísame cuando lancen</a>
+        <a class="btn ghost" href="mailto:contact@roult.us?subject=Av%C3%ADsenme%20cuando%20lancen%20un%20SaaS" data-es="Notificarme al lanzamiento" data-en="Notify me at launch">Notificarme al lanzamiento</a>
       </div>
     </div>
   </div>
@@ -437,31 +431,31 @@ html [data-es]{transition:opacity .18s ease}
     <div class="sec-head rev">
       <div class="eyebrow" data-es="Cómo trabajamos" data-en="How we work">Cómo trabajamos</div>
       <h2 data-es="Cuatro pasos, sin misterio." data-en="Four steps, no mystery.">Cuatro pasos, sin misterio.</h2>
-      <p data-es="Sabes desde el primer día qué va a pasar, cuándo y cuánto cuesta." data-en="From day one you know what happens, when, and what it costs.">Sabes desde el primer día qué va a pasar, cuándo y cuánto cuesta.</p>
+      <p data-es="Desde el primer día queda claro qué va a pasar, cuándo y cuánto cuesta." data-en="From day one you know what happens, when, and what it costs.">Desde el primer día queda claro qué va a pasar, cuándo y cuánto cuesta.</p>
     </div>
     <div class="steps">
       <div class="step">
         <div class="n">01</div>
         <h3 data-es="Conversamos" data-en="We talk">Conversamos</h3>
-        <p data-es="Entendemos qué necesita tu negocio y con qué sistemas ya trabajas. Treinta minutos, sin costo." data-en="We learn what your business needs and what systems you already use. Thirty minutes, free.">Entendemos qué necesita tu negocio y con qué sistemas ya trabajas. Treinta minutos, sin costo.</p>
+        <p data-es="Entendemos qué necesita su negocio y con qué sistemas ya trabaja. Treinta minutos, sin costo." data-en="We learn what your business needs and what systems you already use. Thirty minutes, free.">Entendemos qué necesita su negocio y con qué sistemas ya trabaja. Treinta minutos, sin costo.</p>
         <div class="when" data-es="DÍA 1" data-en="DAY 1">DÍA 1</div>
       </div>
       <div class="step">
         <div class="n">02</div>
         <h3 data-es="Proponemos" data-en="We propose">Proponemos</h3>
-        <p data-es="Te mandamos alcance, plazos y precio cerrado por escrito. Recién ahí decides." data-en="We send scope, timeline and a fixed price in writing. Only then do you decide.">Te mandamos alcance, plazos y precio cerrado por escrito. Recién ahí decides.</p>
+        <p data-es="Le enviamos alcance, plazos y precio cerrado por escrito. La decisión es suya." data-en="We send scope, timeline and a fixed price in writing. Only then do you decide.">Le enviamos alcance, plazos y precio cerrado por escrito. La decisión es suya.</p>
         <div class="when" data-es="DÍA 5" data-en="DAY 5">DÍA 5</div>
       </div>
       <div class="step">
         <div class="n">03</div>
         <h3 data-es="Construimos" data-en="We build">Construimos</h3>
-        <p data-es="Avances que puedes revisar en el camino, no solo al final. Dos rondas de ajustes incluidas." data-en="Progress you can review along the way, not just at the end. Two rounds of adjustments included.">Avances que puedes revisar en el camino, no solo al final. Dos rondas de ajustes incluidas.</p>
+        <p data-es="Avances que puede revisar durante el proceso, no solo al final. Incluye dos rondas de ajustes." data-en="Progress you can review along the way, not just at the end. Two rounds of adjustments included.">Avances que puede revisar durante el proceso, no solo al final. Incluye dos rondas de ajustes.</p>
         <div class="when" data-es="SEGÚN ALCANCE" data-en="BY SCOPE">SEGÚN ALCANCE</div>
       </div>
       <div class="step">
         <div class="n">04</div>
         <h3 data-es="Entregamos" data-en="We deliver">Entregamos</h3>
-        <p data-es="El código y la infraestructura quedan a tu nombre. Si quieres, seguimos dando soporte." data-en="The code and infrastructure stay in your name. We can keep supporting it if you want.">El código y la infraestructura quedan a tu nombre. Si quieres, seguimos dando soporte.</p>
+        <p data-es="El código y la infraestructura quedan a su nombre. Si lo desea, continuamos brindando soporte." data-en="The code and infrastructure stay in your name. We can keep supporting it if you want.">El código y la infraestructura quedan a su nombre. Si lo desea, continuamos brindando soporte.</p>
         <div class="when" data-es="ENTREGA" data-en="HANDOFF">ENTREGA</div>
       </div>
     </div>
@@ -472,16 +466,16 @@ html [data-es]{transition:opacity .18s ease}
   <div class="shell">
     <div class="sec-head rev">
       <div class="eyebrow" data-es="Compromisos" data-en="Commitments">Compromisos</div>
-      <h2 data-es="Con esto sí puedes contar." data-en="Here's what you can count on.">Con esto sí puedes contar.</h2>
+      <h2 data-es="Esto es lo que puede esperar de nosotros." data-en="Here's what you can count on.">Esto es lo que puede esperar de nosotros.</h2>
       <p data-es="No cambia sin importar el proyecto o la suscripción." data-en="It doesn't change no matter the project or subscription.">No cambia sin importar el proyecto o la suscripción.</p>
     </div>
     <div class="commit rev">
-      <div><b data-es="El código es tuyo" data-en="The code is yours">El código es tuyo</b><span data-es="Repositorio y accesos a tu nombre desde el primer día." data-en="Repository and access under your name from day one.">Repositorio y accesos a tu nombre desde el primer día.</span></div>
-      <div><b data-es="Precio cerrado por escrito" data-en="Fixed price in writing">Precio cerrado por escrito</b><span data-es="Antes de empezar, no después. Y no se mueve durante el proyecto." data-en="Before we start, not after. It doesn't move during the project.">Antes de empezar, no después. Y no se mueve durante el proyecto.</span></div>
-      <div><b data-es="Sin permanencia forzada" data-en="No forced commitment">Sin permanencia forzada</b><span data-es="Las suscripciones se cancelan cuando quieras, sin letra chica." data-en="Subscriptions cancel whenever you want, no fine print.">Las suscripciones se cancelan cuando quieras, sin letra chica.</span></div>
-      <div><b data-es="Hablas con quien construye" data-en="You talk to the people building it">Hablas con quien construye</b><span data-es="Sin vendedores en medio. Tratas directo con el equipo técnico." data-en="No salespeople in between. You deal directly with the technical team.">Sin vendedores en medio. Tratas directo con el equipo técnico.</span></div>
-      <div><b data-es="Respuesta el mismo día hábil" data-en="Same business-day response">Respuesta el mismo día hábil</b><span data-es="Escribes y te contesta una persona, no un bot." data-en="You write and a person replies, not a bot.">Escribes y te contesta una persona, no un bot.</span></div>
-      <div><b data-es="Plazos reales" data-en="Real timelines">Plazos reales</b><span data-es="Si algo se atrasa, te avisamos antes de que preguntes." data-en="If something slips, we tell you before you have to ask.">Si algo se atrasa, te avisamos antes de que preguntes.</span></div>
+      <div><b data-es="El código es suyo" data-en="The code is yours">El código es suyo</b><span data-es="Repositorio y accesos a su nombre desde el primer día." data-en="Repository and access under your name from day one.">Repositorio y accesos a su nombre desde el primer día.</span></div>
+      <div><b data-es="Precio cerrado por escrito" data-en="Fixed price in writing">Precio cerrado por escrito</b><span data-es="Antes de empezar, no después. No varía durante el proyecto." data-en="Before we start, not after. It doesn't move during the project.">Antes de empezar, no después. No varía durante el proyecto.</span></div>
+      <div><b data-es="Sin permanencia forzada" data-en="No forced commitment">Sin permanencia forzada</b><span data-es="Las suscripciones se cancelan cuando lo desee, sin letra pequeña." data-en="Subscriptions cancel whenever you want, no fine print.">Las suscripciones se cancelan cuando lo desee, sin letra pequeña.</span></div>
+      <div><b data-es="Trato directo con quien desarrolla" data-en="You talk to the people building it">Trato directo con quien desarrolla</b><span data-es="Sin intermediarios comerciales. Trato directo con el equipo técnico." data-en="No salespeople in between. You deal directly with the technical team.">Sin intermediarios comerciales. Trato directo con el equipo técnico.</span></div>
+      <div><b data-es="Respuesta el mismo día hábil" data-en="Same business-day response">Respuesta el mismo día hábil</b><span data-es="Al escribir, responde una persona real, no un bot." data-en="You write and a person replies, not a bot.">Al escribir, responde una persona real, no un bot.</span></div>
+      <div><b data-es="Plazos reales" data-en="Real timelines">Plazos reales</b><span data-es="Si algo se retrasa, le informamos antes de que tenga que preguntar." data-en="If something slips, we tell you before you have to ask.">Si algo se retrasa, le informamos antes de que tenga que preguntar.</span></div>
     </div>
   </div>
 </section>
@@ -494,31 +488,31 @@ html [data-es]{transition:opacity .18s ease}
     </div>
     <details open>
       <summary data-es="¿El código queda a mi nombre?" data-en="Is the code in my name?">¿El código queda a mi nombre?</summary>
-      <p data-es="Sí, siempre. El repositorio, la infraestructura y los accesos se registran a nombre de tu empresa y te entregamos todas las claves. Si mañana quieres trabajar con otro equipo, te llevas todo." data-en="Yes, always. The repository, infrastructure and access are registered under your company and we hand you every credential. If tomorrow you want to work with another team, you take everything with you.">Sí, siempre. El repositorio, la infraestructura y los accesos se registran a nombre de tu empresa y te entregamos todas las claves. Si mañana quieres trabajar con otro equipo, te llevas todo.</p>
+      <div class="faq-body"><p data-es="Sí, siempre. El repositorio, la infraestructura y los accesos se registran a nombre de su empresa, y le entregamos todas las credenciales. Si en el futuro decide trabajar con otro equipo, se lleva todo." data-en="Yes, always. The repository, infrastructure and access are registered under your company and we hand you every credential. If tomorrow you want to work with another team, you take everything with you.">Sí, siempre. El repositorio, la infraestructura y los accesos se registran a nombre de su empresa, y le entregamos todas las credenciales. Si en el futuro decide trabajar con otro equipo, se lleva todo.</p></div>
     </details>
     <details>
       <summary data-es="¿Y si después quiero cambiar algo del software?" data-en="What if I want to change something later?">¿Y si después quiero cambiar algo del software?</summary>
-      <p data-es="Incluimos dos rondas de ajustes durante el proyecto. Después de la entrega, los cambios chicos entran en el soporte mensual si lo contratas, o se cotizan aparte si prefieres no tenerlo." data-en="Two rounds of adjustments are included during the project. After delivery, small changes are covered by monthly support if you take it, or quoted separately if you'd rather not.">Incluimos dos rondas de ajustes durante el proyecto. Después de la entrega, los cambios chicos entran en el soporte mensual si lo contratas, o se cotizan aparte si prefieres no tenerlo.</p>
+      <div class="faq-body"><p data-es="Incluimos dos rondas de ajustes durante el proyecto. Después de la entrega, los cambios menores quedan cubiertos por el soporte mensual si lo contrata, o se cotizan por separado si prefiere no contar con él." data-en="Two rounds of adjustments are included during the project. After delivery, small changes are covered by monthly support if you take it, or quoted separately if you'd rather not.">Incluimos dos rondas de ajustes durante el proyecto. Después de la entrega, los cambios menores quedan cubiertos por el soporte mensual si lo contrata, o se cotizan por separado si prefiere no contar con él.</p></div>
     </details>
     <details>
       <summary data-es="¿Qué pasa con el soporte después de la entrega?" data-en="What happens with support after delivery?">¿Qué pasa con el soporte después de la entrega?</summary>
-      <p data-es="Puedes quedarte solo con el código, o contratar soporte mensual para monitoreo, correcciones y mejoras pequeñas. Tú decides, y puedes cambiar de opinión cuando quieras." data-en="You can keep just the code, or hire monthly support for monitoring, fixes and small improvements. You decide, and you can change your mind anytime.">Puedes quedarte solo con el código, o contratar soporte mensual para monitoreo, correcciones y mejoras pequeñas. Tú decides, y puedes cambiar de opinión cuando quieras.</p>
+      <div class="faq-body"><p data-es="Puede quedarse solo con el código, o contratar soporte mensual para monitoreo, correcciones y mejoras menores. La decisión es suya, y puede modificarla en cualquier momento." data-en="You can keep just the code, or hire monthly support for monitoring, fixes and small improvements. You decide, and you can change your mind anytime.">Puede quedarse solo con el código, o contratar soporte mensual para monitoreo, correcciones y mejoras menores. La decisión es suya, y puede modificarla en cualquier momento.</p></div>
     </details>
     <details>
-      <summary data-es="Ya resolvemos esto con Excel y WhatsApp. ¿Igual necesitamos software propio?" data-en="We already handle this with Excel and WhatsApp. Do we still need our own software?">Ya resolvemos esto con Excel y WhatsApp. ¿Igual necesitamos software propio?</summary>
-      <p data-es="Mientras el equipo es chico, alcanza. El problema aparece cuando crecen: la información se pierde entre chats y hojas de cálculo, y nadie tiene una sola versión de la verdad. Un sistema propio ordena eso antes de que se vuelva un problema." data-en="While the team is small, it's enough. The problem shows up as you grow: information gets lost across chats and spreadsheets, and nobody has one single source of truth. Your own system fixes that before it becomes a real problem.">Mientras el equipo es chico, alcanza. El problema aparece cuando crecen: la información se pierde entre chats y hojas de cálculo, y nadie tiene una sola versión de la verdad. Un sistema propio ordena eso antes de que se vuelva un problema.</p>
+      <summary data-es="Ya gestionamos esto con Excel y WhatsApp. ¿Aun así necesitamos software propio?" data-en="We already handle this with Excel and WhatsApp. Do we still need our own software?">Ya gestionamos esto con Excel y WhatsApp. ¿Aun así necesitamos software propio?</summary>
+      <div class="faq-body"><p data-es="Mientras el equipo es reducido, puede ser suficiente. El problema surge con el crecimiento: la información se dispersa entre chats y hojas de cálculo, y no existe una única fuente de verdad. Un sistema propio previene ese problema antes de que ocurra." data-en="While the team is small, it's enough. The problem shows up as you grow: information gets lost across chats and spreadsheets, and nobody has one single source of truth. Your own system fixes that before it becomes a real problem.">Mientras el equipo es reducido, puede ser suficiente. El problema surge con el crecimiento: la información se dispersa entre chats y hojas de cálculo, y no existe una única fuente de verdad. Un sistema propio previene ese problema antes de que ocurra.</p></div>
     </details>
     <details>
       <summary data-es="¿Ya puedo suscribirme a algún producto de la suite?" data-en="Can I already subscribe to a suite product?">¿Ya puedo suscribirme a algún producto de la suite?</summary>
-      <p data-es="Todavía no, están en desarrollo. Escríbenos y te avisamos apenas lance el primero." data-en="Not yet, they're still in development. Write to us and we'll let you know as soon as the first one launches.">Todavía no, están en desarrollo. Escríbenos y te avisamos apenas lance el primero.</p>
+      <div class="faq-body"><p data-es="Todavía no; se encuentran en desarrollo. Escríbanos y le notificaremos apenas esté disponible el primero." data-en="Not yet, they're still in development. Write to us and we'll let you know as soon as the first one launches.">Todavía no; se encuentran en desarrollo. Escríbanos y le notificaremos apenas esté disponible el primero.</p></div>
     </details>
     <details>
       <summary data-es="¿Dónde están ubicados?" data-en="Where are you based?">¿Dónde están ubicados?</summary>
-      <p data-es="Roult es un equipo remoto con gente en Latinoamérica y Estados Unidos. Trabajamos por videollamada y por escrito, en tu huso horario." data-en="Roult is a remote team with people across Latin America and the US. We work over video calls and in writing, in your time zone.">Roult es un equipo remoto con gente en Latinoamérica y Estados Unidos. Trabajamos por videollamada y por escrito, en tu huso horario.</p>
+      <div class="faq-body"><p data-es="Roult es un equipo remoto, con profesionales en Latinoamérica y Estados Unidos. Trabajamos por videollamada y por escrito, en su huso horario." data-en="Roult is a remote team with people across Latin America and the US. We work over video calls and in writing, in your time zone.">Roult es un equipo remoto, con profesionales en Latinoamérica y Estados Unidos. Trabajamos por videollamada y por escrito, en su huso horario.</p></div>
     </details>
     <details>
       <summary data-es="¿Cuánto cuesta?" data-en="How much does it cost?">¿Cuánto cuesta?</summary>
-      <p data-es="Para software a medida, depende del alcance: te damos un precio cerrado por escrito después de la primera conversación. Para los productos de la suite, cada uno va a tener su propio precio de suscripción en su propia página, cuando esté listo." data-en="For custom software, it depends on scope: we give you a fixed price in writing after the first conversation. For the suite's products, each one will have its own subscription price on its own page once it's ready.">Para software a medida, depende del alcance: te damos un precio cerrado por escrito después de la primera conversación. Para los productos de la suite, cada uno va a tener su propio precio de suscripción en su propia página, cuando esté listo.</p>
+      <div class="faq-body"><p data-es="Para software a medida, depende del alcance: le entregamos un precio cerrado por escrito después de la primera conversación. Para los productos de la suite, cada uno tendrá su propio precio de suscripción en su respectiva página, una vez esté disponible." data-en="For custom software, it depends on scope: we give you a fixed price in writing after the first conversation. For the suite's products, each one will have its own subscription price on its own page once it's ready.">Para software a medida, depende del alcance: le entregamos un precio cerrado por escrito después de la primera conversación. Para los productos de la suite, cada uno tendrá su propio precio de suscripción en su respectiva página, una vez esté disponible.</p></div>
     </details>
   </div>
 </section>
@@ -527,15 +521,15 @@ html [data-es]{transition:opacity .18s ease}
   <div class="shell form-grid">
     <div class="rev">
       <div class="eyebrow" data-es="Hablemos" data-en="Let's talk">Hablemos</div>
-      <h2 style="margin:16px 0 16px" data-es="Cuéntanos qué necesita tu empresa." data-en="Tell us what your company needs.">Cuéntanos qué necesita tu empresa.</h2>
-      <p style="color:#9ca3ad" data-es="Treinta minutos, sin costo y sin compromiso. Si nos escribes hoy, te respondemos con los siguientes pasos." data-en="Thirty minutes, free and with no commitment. Write today and we'll reply with next steps.">Treinta minutos, sin costo y sin compromiso. Si nos escribes hoy, te respondemos con los siguientes pasos.</p>
+      <h2 style="margin:16px 0 16px" data-es="Cuéntenos qué necesita su empresa." data-en="Tell us what your company needs.">Cuéntenos qué necesita su empresa.</h2>
+      <p style="color:#9ca3ad" data-es="Treinta minutos, sin costo y sin compromiso. Si nos escribe hoy, le respondemos con los siguientes pasos." data-en="Thirty minutes, free and with no commitment. Write today and we'll reply with next steps.">Treinta minutos, sin costo y sin compromiso. Si nos escribe hoy, le respondemos con los siguientes pasos.</p>
       <div class="meta">
         <div><div class="k" data-es="Dónde estamos" data-en="Where we are">Dónde estamos</div><div class="v" data-es="LatAm y Estados Unidos, remoto" data-en="LatAm and the US, remote">LatAm y Estados Unidos, remoto</div></div>
         <div><div class="k" data-es="Respuesta" data-en="Response">Respuesta</div><div class="v" data-es="Mismo día hábil" data-en="Same business day">Mismo día hábil</div></div>
       </div>
     </div>
 
-    <form class="escribe rev" action="mailto:reghuel11a@hotmail.com?subject=Quiero%20hablar%20sobre%20mi%20proyecto" method="post" enctype="text/plain">
+    <form class="escribe rev" id="form-contacto">
       <div class="campo">
         <label for="c-nombre" class="sr-only" data-es="Nombre" data-en="Name">Nombre</label>
         <input id="c-nombre" name="Nombre" type="text" placeholder="Nombre" data-ph-es="Nombre" data-ph-en="Name" required>
@@ -546,10 +540,10 @@ html [data-es]{transition:opacity .18s ease}
       </div>
       <div class="campo">
         <label for="c-mensaje" class="sr-only" data-es="Mensaje" data-en="Message">Mensaje</label>
-        <textarea id="c-mensaje" name="Mensaje" rows="3" placeholder="Cómo se llama tu empresa, a qué se dedica y qué necesitas" data-ph-es="Cómo se llama tu empresa, a qué se dedica y qué necesitas" data-ph-en="Your company's name, what it does and what you need" required></textarea>
+        <textarea id="c-mensaje" name="Mensaje" rows="3" placeholder="Cómo se llama su empresa, a qué se dedica y qué necesita" data-ph-es="Cómo se llama su empresa, a qué se dedica y qué necesita" data-ph-en="Your company's name, what it does and what you need" required></textarea>
       </div>
       <button class="btn" type="submit" data-es="Enviar mensaje" data-en="Send message">Enviar mensaje</button>
-      <p class="mini-aviso" data-es="Al escribirnos aceptas nuestra <a href='privacidad.html'>política de privacidad</a>." data-en="By writing you accept our <a href='privacidad.html'>privacy policy</a>.">Al escribirnos aceptas nuestra <a href="privacidad.html">política de privacidad</a>.</p>
+      <p class="mini-aviso" data-es="Al escribirnos, acepta nuestra <a href='privacidad.html'>política de privacidad</a>." data-en="By writing you accept our <a href='privacidad.html'>privacy policy</a>.">Al escribirnos, acepta nuestra <a href="privacidad.html">política de privacidad</a>.</p>
     </form>
   </div>
 </section>
@@ -558,7 +552,7 @@ html [data-es]{transition:opacity .18s ease}
 
 <footer>
   <div class="shell foot">
-    <div class="foot-brand">ROULT<i>.</i></div>
+    <div class="foot-brand">ROULT</div>
     <div class="foot-meta" data-es="LatAm y Estados Unidos" data-en="LatAm and the United States">LatAm y Estados Unidos</div>
     <div class="foot-links">
       <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
@@ -576,9 +570,103 @@ function cascada(){
   var palabras = texto.trim().split(/\s+/);
   h.innerHTML = palabras.map(function(w,i){
     return '<span class="pal" style="--i:'+i+'">'+w+'</span>';
-  }).join(' ') + '<span class="dot" style="--i:'+palabras.length+'">.</span>';
+  }).join(' ');
 }
 cascada();
+
+// ── FAQ: acordeón animado con transición CSS de altura en píxeles ──
+// nada de WAAPI ni del truco de grid-rows: en este tipo de entornos ninguno de
+// los dos resultó confiable (onfinish no siempre dispara, y con dos acordeones
+// animando a la vez la medición se descuadraba). Esto es lo mismo que se usa
+// hace años para animar altura: fijar alto inicial en px, forzar reflow, fijar
+// alto final en px y dejar que la transición interpole. Un setTimeout con la
+// misma duración avisa cuándo terminó, sin depender de ningún evento.
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = [].slice.call(document.querySelectorAll('#faq details'));
+  var DUR = 400, EASE = 'cubic-bezier(.22,.8,.36,1)';
+
+  items.forEach(function(details){
+    var summary = details.querySelector('summary');
+    var body = details.querySelector('.faq-body');
+
+    summary.addEventListener('click', function(e){
+      e.preventDefault();
+      if(reduce){
+        details.open = !details.open;
+        if(details.open) items.forEach(function(o){ if(o!==details) o.open=false; });
+        return;
+      }
+      if(details.open) shrink(details, summary);
+      else{
+        items.forEach(function(other){
+          if(other!==details && other.open) shrink(other, other.querySelector('summary'));
+        });
+        grow(details, summary, body);
+      }
+    });
+  });
+
+  function paddingY(details){
+    var s = getComputedStyle(details);
+    return parseFloat(s.paddingTop) + parseFloat(s.paddingBottom);
+  }
+
+  function freeze(details){
+    clearTimeout(details._cleanupTimer);
+    details.style.transition = 'none';
+    details.style.overflow = 'hidden';
+    var startH = details.getBoundingClientRect().height;
+    details.style.height = startH + 'px';
+    void details.offsetHeight; // fuerza el reflow antes de animar
+    return startH;
+  }
+
+  function animateTo(details, endH, after){
+    details.style.transition = 'height '+DUR+'ms '+EASE;
+    requestAnimationFrame(function(){ details.style.height = endH + 'px'; });
+    details._cleanupTimer = setTimeout(function(){ after(); cleanup(details); }, DUR);
+  }
+
+  function grow(details, summary, body){
+    freeze(details);
+    details.open = true;
+    var endH = paddingY(details) + summary.getBoundingClientRect().height + body.getBoundingClientRect().height;
+    animateTo(details, endH, function(){});
+  }
+
+  function shrink(details, summary){
+    freeze(details);
+    var endH = paddingY(details) + summary.getBoundingClientRect().height;
+    animateTo(details, endH, function(){ details.open = false; });
+  }
+
+  function cleanup(details){
+    details.style.height = '';
+    details.style.overflow = '';
+    details.style.transition = '';
+  }
+})();
+
+// ── formulario de contacto: arma un correo ordenado hacia contact@roult.us ──
+(function(){
+  var form = document.getElementById('form-contacto');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var nombre = form.elements['Nombre'].value.trim();
+    var correo = form.elements['Correo'].value.trim();
+    var mensaje = form.elements['Mensaje'].value.trim();
+    var asunto = 'Nuevo contacto desde roult.us — ' + nombre;
+    var cuerpo =
+      'Nuevo mensaje desde el formulario de contacto de roult.us\n' +
+      '——————————————————————————\n\n' +
+      'Nombre:  ' + nombre + '\n' +
+      'Correo:  ' + correo + '\n\n' +
+      'Mensaje:\n' + mensaje + '\n';
+    window.location.href = 'mailto:contact@roult.us?subject=' + encodeURIComponent(asunto) + '&body=' + encodeURIComponent(cuerpo);
+  });
+})();
 
 // ── revelar al hacer scroll ──
 (function(){
