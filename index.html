@@ -159,6 +159,7 @@ section>.shell{position:relative;z-index:1}
 .pane{padding:34px}
 .pane+.pane{border-left:1px solid var(--line)}
 .pane h3{font-size:26px;margin-bottom:6px}
+.pane p{color:var(--ink-70);font-size:15.5px;margin:0 0 16px}
 .pane .kicker{font-family:var(--mono);font-size:11px;color:var(--cobalt);letter-spacing:.1em;text-transform:uppercase}
 ul.tick{list-style:none;padding:0;margin:20px 0 0;font-size:15.5px}
 ul.tick li{padding:9px 0 9px 26px;border-top:1px solid var(--line);position:relative;color:var(--ink-70)}
@@ -348,6 +349,7 @@ html [data-es]{transition:opacity .18s ease}
       <div class="pane rev">
         <div class="kicker" data-es="Parte uno" data-en="Part one">Parte uno</div>
         <h3 data-es="Software a medida" data-en="Custom software">Software a medida</h3>
+        <p data-es="Incluye aplicaciones internas, páginas web y automatizaciones de procesos — cualquier sistema hecho a la medida de su negocio." data-en="Covers internal applications, business websites and process automations — any system built around your business.">Incluye aplicaciones internas, páginas web y automatizaciones de procesos — cualquier sistema hecho a la medida de su negocio.</p>
         <ul class="tick">
           <li data-es="Aplicaciones y sistemas internos diseñados en función de cómo opera su equipo" data-en="Applications and internal systems built around how your team works, not the other way around">Aplicaciones y sistemas internos diseñados en función de cómo opera su equipo</li>
           <li data-es="Arquitectura preparada para crecer: de diez usuarios a mil, sin rediseños" data-en="Architecture designed to grow: ten users today, a thousand tomorrow">Arquitectura preparada para crecer: de diez usuarios a mil, sin rediseños</li>
@@ -702,10 +704,11 @@ if(matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion:
 // ── idioma con fundido ──
 var lang='es';
 var btn=document.getElementById('lang');
-btn.addEventListener('click',function(){
-  document.documentElement.classList.add('lang-cambia');
-  setTimeout(function(){
-    lang = lang==='es' ? 'en' : 'es';
+
+function aplicarIdioma(nuevo, animar){
+  if(nuevo===lang) return;
+  function set(){
+    lang = nuevo;
     btn.textContent = lang==='es' ? 'EN' : 'ES';
     document.documentElement.lang = lang;
     document.querySelectorAll('[data-es]').forEach(function(el){
@@ -717,9 +720,37 @@ btn.addEventListener('click',function(){
       if(v!=null) el.placeholder = v;
     });
     cascada();
+  }
+  if(animar===false){ set(); return; }
+  document.documentElement.classList.add('lang-cambia');
+  setTimeout(function(){
+    set();
     document.documentElement.classList.remove('lang-cambia');
   },190);
+}
+
+btn.addEventListener('click',function(){
+  var nuevo = lang==='es' ? 'en' : 'es';
+  aplicarIdioma(nuevo, true);
+  try{ localStorage.setItem('roult-lang', nuevo); }catch(e){}
 });
+
+// ── idioma por ubicación: solo en la primera visita, si no eligió antes a mano ──
+// depende de un servicio externo (ipapi.co) que algunos bloqueadores de
+// anuncios bloquean; si falla o se bloquea, se queda en español sin avisar.
+(function(){
+  var guardado = null;
+  try{ guardado = localStorage.getItem('roult-lang'); }catch(e){}
+  if(guardado==='es' || guardado==='en'){
+    aplicarIdioma(guardado, false);
+    return;
+  }
+  fetch('https://ipapi.co/json/').then(function(r){ return r.json(); }).then(function(d){
+    var detectado = (d && d.country_code==='US') ? 'en' : 'es';
+    try{ localStorage.setItem('roult-lang', detectado); }catch(e){}
+    aplicarIdioma(detectado, true);
+  }).catch(function(){});
+})();
 </script>
 </body>
 </html>
