@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="/roult-icon-4f.svg">
+<title>Sitios web para negocios · Roult</title>
+<meta name="description" content="Sitios institucionales o de ventas, diseñados y desarrollados a la medida de su marca. Optimizados para buscadores y conversión. Entrega en 2 a 4 semanas.">
+<link rel="canonical" href="https://roult.us/sitios-web">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://roult.us/sitios-web">
+<meta property="og:title" content="Sitios web para negocios · Roult">
+<meta property="og:description" content="Un sitio propio, diseñado a la medida de su marca, rápido y encontrable en Google.">
+<meta property="og:image" content="https://roult.us/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_PE">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter+Tight:wght@400;500;600&family=DM+Mono:wght@400;500&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","serviceType":"Diseño y desarrollo de sitios web","provider":{"@type":"ProfessionalService","name":"Roult","url":"https://roult.us/"},"areaServed":[{"@type":"Country","name":"Peru"},{"@type":"Country","name":"United States"}],"description":"Sitios institucionales y de ventas diseñados y desarrollados a la medida de la marca de cada negocio, optimizados para buscadores y conversión."}
+</script>
+<style>
+:root{
+  --ink:#111318;
+  --ink-70:#4b5058;
+  --ink-40:#8a9099;
+  --bone:#F1F2ED;
+  --bone-2:#E7E9E1;
+  --line:#D4D7CC;
+  --cobalt:#2438E0;
+  --cobalt-dk:#1A29AC;
+  --white:#fff;
+  --ochre:#E39B12;
+  --mint:#2FB67C;
+  --shell:min(1180px,92vw);
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"Inter Tight",system-ui,sans-serif;
+  --mono:"DM Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.shell{width:var(--shell);margin-inline:auto}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-40)}
+h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.02;margin:0}
+h2{font-size:clamp(30px,4.6vw,52px)}
+p{margin:0 0 1em}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--bone);padding:10px 16px;z-index:99}
+.skip:focus{left:8px;top:8px}
+:focus-visible{outline:2.5px solid var(--cobalt);outline-offset:3px}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(241,242,237,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;gap:28px;height:64px}
+.brand{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.04em;text-decoration:none}
+.navlinks{display:flex;gap:24px;margin-left:auto;font-size:14px}
+.navlinks a{text-decoration:none;color:var(--ink-70)}
+.navlinks a:hover{color:var(--ink)}
+.lang{font-family:var(--mono);font-size:11px;border:1px solid var(--line);background:none;padding:5px 9px;cursor:pointer;letter-spacing:.08em}
+.lang:hover{border-color:var(--ink)}
+.btn{display:inline-block;background:var(--ink);color:var(--bone);text-decoration:none;padding:13px 22px;font-weight:600;font-size:15px;border:1px solid var(--ink);cursor:pointer;font-family:var(--body)}
+.btn:hover{background:var(--cobalt);border-color:var(--cobalt)}
+.btn.sm{padding:8px 15px;font-size:14px}
+.btn.ghost{background:none;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bone)}
+
+/* hero */
+.hero{padding:70px 0 0;position:relative;overflow:hidden}
+.hero .shell{position:relative;z-index:1}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+h1{font-size:clamp(46px,6.6vw,96px);line-height:.98;margin:22px 0 22px}
+.lede{font-size:19px;color:var(--ink-70);max-width:44ch}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.facts{margin-top:36px;border-top:1px solid var(--line)}
+.facts div{display:flex;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink-70)}
+.facts b{font-family:var(--mono);font-size:11px;color:var(--cobalt);padding-top:3px}
+
+/* diagrama "a la medida" (hero) — sin marco de ventana, sin nodos: una hoja de medidas */
+.medida{position:relative;width:100%;max-width:480px;aspect-ratio:480/460;margin-inline:auto}
+.medida-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.medida-svg path,.medida-svg rect,.medida-svg circle{fill:none;stroke-linecap:square}
+
+.medida-svg .crop{stroke:var(--ink-40);stroke-width:1.3;opacity:0;transition:opacity .5s ease}
+.medida.vis .medida-svg .crop{opacity:.55}
+.medida-svg .crop:nth-of-type(1){transition-delay:.05s}
+.medida-svg .crop:nth-of-type(2){transition-delay:.15s}
+.medida-svg .crop:nth-of-type(3){transition-delay:.25s}
+.medida-svg .crop:nth-of-type(4){transition-delay:.35s}
+
+.medida-svg .rectq{stroke:var(--cobalt);stroke-width:1.6;stroke-dasharray:100;stroke-dashoffset:100;transition:stroke-dashoffset 1s cubic-bezier(.22,.8,.36,1) .4s}
+.medida.vis .medida-svg .rectq{stroke-dashoffset:0}
+.medida-svg .centro{stroke:var(--cobalt);stroke-width:1.4;opacity:0;transition:opacity .4s ease .95s}
+.medida.vis .medida-svg .centro{opacity:1}
+
+.medida-svg .ext{stroke:var(--line);stroke-width:1;stroke-dasharray:3 3;opacity:0;transition:opacity .4s ease .55s}
+.medida.vis .medida-svg .ext{opacity:1;animation:cintaMide 1.6s linear 2s infinite}
+@keyframes cintaMide{to{stroke-dashoffset:-12}}
+.medida-svg .dim{stroke:var(--ink-70);stroke-width:1.3;stroke-dasharray:100;stroke-dashoffset:100;transition:stroke-dashoffset .6s ease .7s}
+.medida.vis .medida-svg .dim{stroke-dashoffset:0}
+.medida-svg .tick{stroke:var(--ink-70);stroke-width:1.3;opacity:0;transition:opacity .3s ease 1.2s}
+.medida.vis .medida-svg .tick{opacity:1}
+
+.medida-svg .leader{stroke:var(--ink-40);stroke-width:1.2;stroke-dasharray:100;stroke-dashoffset:100;transition:stroke-dashoffset .5s ease 1s}
+.medida.vis .medida-svg .leader{stroke-dashoffset:0}
+.medida-svg .punto{fill:var(--ink-40);opacity:0;transition:opacity .3s ease 1.4s}
+.medida.vis .medida-svg .punto{opacity:1}
+
+.medida-tag{position:absolute;transform:translate(-50%,-50%);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-70);white-space:nowrap;opacity:0;transition:opacity .5s ease}
+.medida.vis .medida-tag{opacity:1}
+.medida-tag:nth-of-type(1){transition-delay:1.3s}
+.medida-tag:nth-of-type(2){transition-delay:1.55s}
+.medida-tag:nth-of-type(3){transition-delay:1.8s}
+.medida-tag.acento{color:var(--cobalt);font-weight:600}
+.medida-tag.vert{transform:translate(-50%,-50%) rotate(-90deg)}
+.medida-esc{position:absolute;left:12.5%;top:93.5%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ink-40);opacity:0;transition:opacity .5s ease 2s}
+.medida.vis .medida-esc{opacity:1}
+
+@media(max-width:900px){.medida{max-width:380px;margin-top:24px}}
+@media(prefers-reduced-motion:reduce){
+  .medida-svg .crop,.medida-svg .rectq,.medida-svg .centro,.medida-svg .ext,.medida-svg .dim,.medida-svg .tick,.medida-svg .leader,.medida-svg .punto,.medida-tag,.medida-esc{transition:none!important;animation:none!important}
+  .medida.vis .medida-svg .crop{opacity:.55}
+  .medida.vis .medida-svg .rectq,.medida.vis .medida-svg .dim,.medida.vis .medida-svg .leader{stroke-dashoffset:0}
+  .medida.vis .medida-svg .centro,.medida.vis .medida-svg .ext,.medida.vis .medida-svg .tick,.medida.vis .medida-svg .punto,.medida.vis .medida-tag,.medida.vis .medida-esc{opacity:1}
+}
+
+/* formulario de contacto: sin tarjeta, sin etiquetas visibles — solo los campos, apoyados en el fondo de la sección */
+.escribe{display:flex;flex-direction:column;gap:26px;align-items:flex-start}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.campo{width:100%}
+.campo input,.campo textarea{width:100%;background:none;border:none;border-bottom:1px solid #33383f;color:var(--white);font-family:var(--body);font-size:16px;padding:10px 0;resize:vertical}
+.campo input::placeholder,.campo textarea::placeholder{color:#6d747e}
+.campo input:focus,.campo textarea:focus{outline:none;border-bottom-color:var(--cobalt)}
+.escribe .mini-aviso{margin:0;font-size:12.5px;color:#6d747e}
+.escribe .mini-aviso a{color:#9ca3ad}
+.escribe .btn{background:var(--cobalt);border-color:var(--cobalt);color:#fff}
+.escribe .btn:hover{background:var(--cobalt-dk);border-color:var(--cobalt-dk)}
+
+/* sections */
+section{padding:96px 0;position:relative}
+section>.shell{position:relative;z-index:1}
+.sec-head{max-width:56ch;margin-bottom:44px}
+.sec-head h2{margin:16px 0 14px}
+.sec-head p{color:var(--ink-70);margin:0}
+.band{background:var(--ink);color:var(--bone-2)}
+.band .sec-head p{color:#9ca3ad}
+.band h2,.band h3{color:var(--white)}
+.band .eyebrow{color:#7a828d}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);background:var(--white)}
+.pane{padding:34px}
+.pane+.pane{border-left:1px solid var(--line)}
+.pane h3{font-size:26px;margin-bottom:6px}
+.pane .kicker{font-family:var(--mono);font-size:11px;color:var(--cobalt);letter-spacing:.1em;text-transform:uppercase}
+ul.tick{list-style:none;padding:0;margin:20px 0 0;font-size:15.5px}
+ul.tick li{padding:9px 0 9px 26px;border-top:1px solid var(--line);position:relative;color:var(--ink-70)}
+ul.tick li::before{content:"→";position:absolute;left:0;color:var(--cobalt);font-family:var(--mono)}
+.pane .time{margin-top:18px;font-family:var(--mono);font-size:11.5px;color:var(--ink-40);letter-spacing:.06em}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid #33383f}
+.step{padding:26px 22px 30px;border-right:1px solid #33383f}
+.step:last-child{border-right:0}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--ochre);letter-spacing:.1em}
+.step h3{font-size:20px;margin:14px 0 8px}
+.step p{font-size:14.5px;color:#9ca3ad;margin:0}
+.step .when{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:10.5px;border:1px solid #454b53;padding:3px 8px;color:#c3c9d1;letter-spacing:.06em}
+
+.commit{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.commit div{background:var(--bone);padding:20px 22px;font-size:15px;color:var(--ink-70)}
+.commit b{display:block;font-family:var(--body);color:var(--ink);font-weight:600;margin-bottom:3px}
+
+.suite-cta{margin-top:32px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.suite-note{font-family:var(--mono);font-size:11px;color:var(--ink-40);letter-spacing:.05em}
+
+.product{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:8px 0 0}
+.product+.product{padding-top:64px;margin-top:64px;border-top:1px solid var(--line)}
+.product.reverse .product-copy{order:2}
+.product.reverse .product-shot{order:1}
+.product-name{font-size:clamp(30px,3.6vw,40px);margin:10px 0 2px}
+.product-tag{font-size:17px;color:var(--ink-70);margin:0 0 20px}
+.product-cta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:28px}
+.feature-title{font-size:24px;margin:8px 0 10px}
+.frame{border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--white);box-shadow:0 24px 48px -24px rgba(17,19,24,.35)}
+.frame-bar{height:30px;display:flex;align-items:center;gap:6px;padding:0 12px;background:#20242c}
+.frame-bar i{width:7px;height:7px;border-radius:50%;background:#3a4048;flex:none}
+.frame-bar span{margin-left:8px;font-family:var(--mono);font-size:10px;color:#7a828d;letter-spacing:.06em}
+.frame img{width:100%;height:auto;display:block}
+.suite-more{margin-top:64px;padding-top:36px;border-top:1px solid var(--line)}
+.suite-more>p{color:var(--ink-70);margin:0 0 18px;max-width:56ch}
+@media (max-width:900px){
+  .product{grid-template-columns:1fr}
+  .product.reverse .product-copy,.product.reverse .product-shot{order:initial}
+}
+
+details{border-bottom:1px solid var(--line);padding:4px 0;overflow-anchor:none}
+summary{cursor:pointer;padding:17px 0;font-weight:600;font-size:17.5px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);color:var(--cobalt);font-weight:400;flex:none;transition:transform .25s ease}
+details[open] summary::after{content:"−"}
+.faq-body>p{color:var(--ink-70);font-size:15.5px;max-width:70ch;margin:0;padding-bottom:6px}
+
+/* form */
+.form-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.meta{display:flex;gap:44px;flex-wrap:wrap;margin-top:14px}
+.meta>div{display:flex;flex-direction:column;gap:5px}
+.meta .k{font-family:var(--mono);font-size:10.5px;color:#7a828d;letter-spacing:.12em;text-transform:uppercase}
+.meta .v{font-size:15px;color:var(--white)}
+
+footer{background:var(--bone);border-top:1px solid var(--line);padding:26px 0;font-size:13.5px;color:var(--ink-40)}
+.foot{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.foot-brand{font-family:var(--display);font-weight:800;letter-spacing:-.03em;color:var(--ink);font-size:15px}
+.foot-meta{margin-right:auto}
+.foot-links{display:flex;gap:20px}
+.foot-links a{color:var(--ink-70);text-decoration:none}
+.foot-links a:hover{color:var(--cobalt)}
+@media(max-width:600px){.foot{flex-direction:column;align-items:flex-start;gap:10px}}
+
+@media (max-width:900px){
+  .hero-grid,.form-grid{grid-template-columns:1fr;gap:44px}
+  .two,.commit{grid-template-columns:1fr}
+  .pane+.pane{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-template-columns:1fr 1fr}
+  .step:nth-child(2){border-right:0}
+  .step{border-bottom:1px solid #33383f}
+  .navlinks{display:none}
+  section{padding:64px 0}
+}
+@media (max-width:520px){
+  .steps{grid-template-columns:1fr}
+  .step{border-right:0}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  html.js .rev{opacity:1;transform:none}
+  html.js h1 .pal{opacity:1;transform:none}
+}
+
+/* ═══ entrada del titular ═══ */
+html.js h1 .pal{display:inline-block;opacity:0;transform:translateY(.55em) rotate(1.6deg);animation:caer .62s cubic-bezier(.2,.75,.3,1) forwards;animation-delay:calc(.07s * var(--i))}
+@keyframes caer{to{opacity:1;transform:none}}
+html.js .rev{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,.8,.36,1)}
+html.js .rev.vis{opacity:1;transform:none}
+html.js .rev:nth-child(2){transition-delay:.07s}
+html.js .rev:nth-child(3){transition-delay:.14s}
+html.js .rev:nth-child(4){transition-delay:.21s}
+
+/* ═══ tacto ═══ */
+header{transition:box-shadow .3s ease}
+header.encogida{box-shadow:0 6px 24px -12px rgba(17,19,24,.25)}
+header.encogida .nav{height:56px}
+.nav{transition:height .3s ease}
+.navlinks a{position:relative;text-decoration:none}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:-3px;height:1.5px;width:100%;background:var(--cobalt);transform:scaleX(0);transform-origin:right;transition:transform .3s cubic-bezier(.6,0,.2,1)}
+.navlinks a:hover::after{transform:scaleX(1);transform-origin:left}
+.btn{transition:transform .25s cubic-bezier(.2,.8,.3,1),background .15s ease,border-color .15s ease}
+html.lang-cambia [data-es]{opacity:0;transition:opacity .18s ease}
+html [data-es]{transition:opacity .18s ease}
+
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add("js")</script>
+<a class="skip" href="#main" data-es="Ir al contenido" data-en="Skip to content">Ir al contenido</a>
+
+<header>
+  <nav class="shell">
+    <a class="brand" href="/">ROULT</a>
+    <div class="navlinks">
+      <a href="/#hacemos" data-es="Qué hacemos" data-en="What we do">Qué hacemos</a>
+      <a href="/#servicios" data-es="Servicios" data-en="Services">Servicios</a>
+      <a href="/#productos" data-es="Productos" data-en="Products">Productos</a>
+      <a href="/#proceso" data-es="Cómo trabajamos" data-en="How we work">Cómo trabajamos</a>
+      <a href="/#faq" data-es="Preguntas" data-en="FAQ">Preguntas</a>
+    </div>
+    <button class="lang" id="lang" aria-label="Change language">EN</button>
+    <a class="btn sm" href="/#contacto" data-es="Hablemos" data-en="Let's talk">Hablemos</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<div class="hero" style="padding-bottom:70px">
+  <div class="shell">
+    <div style="max-width:70ch">
+      <div class="eyebrow" data-es="Servicio · Sitios web" data-en="Service · Websites">Servicio · Sitios web</div>
+      <h1 data-es="Sitios web para negocios" data-en="Websites for businesses">Sitios web para negocios</h1>
+      <p class="lede" style="max-width:60ch" data-es="Un sitio institucional o de ventas, diseñado y desarrollado a la medida de su marca. Rápido, encontrable en Google y listo para convertir visitas en conversaciones." data-en="An institutional or sales site, designed and built around your brand. Fast, findable on Google and ready to turn visits into conversations.">Un sitio institucional o de ventas, diseñado y desarrollado a la medida de su marca. Rápido, encontrable en Google y listo para convertir visitas en conversaciones.</p>
+      <div class="cta-row">
+        <a class="btn" href="/#contacto" data-es="Hablemos de su sitio" data-en="Let's talk about your site">Hablemos de su sitio</a>
+        <a class="btn ghost" href="/" data-es="Volver al inicio" data-en="Back to home">Volver al inicio</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="incluye">
+  <div class="shell">
+    <div class="sec-head rev">
+      <div class="eyebrow" data-es="Qué incluye" data-en="What's included">Qué incluye</div>
+      <h2 data-es="Un sitio propio, no una plantilla reutilizada por cientos de negocios." data-en="A site of your own, not a template reused by hundreds of businesses.">Un sitio propio, no una plantilla reutilizada por cientos de negocios.</h2>
+      <p data-es="Diseñado y desarrollado a la medida de su marca, rápido de cargar y encontrable en Google desde el primer día." data-en="Designed and built around your brand, fast to load and findable on Google from day one.">Diseñado y desarrollado a la medida de su marca, rápido de cargar y encontrable en Google desde el primer día.</p>
+    </div>
+    <div class="two">
+      <div class="pane rev">
+        <div class="kicker" data-es="Diseño y desarrollo" data-en="Design and development">Diseño y desarrollo</div>
+        <h3 data-es="Su marca, no una plantilla" data-en="Your brand, not a template">Su marca, no una plantilla</h3>
+        <ul class="tick">
+          <li data-es="Diseño propio, no una plantilla genérica reutilizada por cientos de sitios" data-en="Original design, not a generic template reused by hundreds of sites">Diseño propio, no una plantilla genérica reutilizada por cientos de sitios</li>
+          <li data-es="Código liviano: carga rápida incluso con conexiones móviles limitadas" data-en="Lightweight code: fast loading even on limited mobile connections">Código liviano: carga rápida incluso con conexiones móviles limitadas</li>
+          <li data-es="Panel simple para que su equipo actualice textos e imágenes sin depender de nosotros" data-en="A simple panel so your team can update text and images without depending on us">Panel simple para que su equipo actualice textos e imágenes sin depender de nosotros</li>
+        </ul>
+        <div class="time" data-es="ENTREGA EN 2 A 4 SEMANAS" data-en="DELIVERED IN 2 TO 4 WEEKS">ENTREGA EN 2 A 4 SEMANAS</div>
+      </div>
+      <div class="pane rev">
+        <div class="kicker" data-es="Encontrabilidad" data-en="Findability">Encontrabilidad</div>
+        <h3 data-es="Pensado para aparecer y para convertir" data-en="Built to show up and to convert">Pensado para aparecer y para convertir</h3>
+        <ul class="tick">
+          <li data-es="Optimizado para buscadores desde la estructura, no como un parche al final" data-en="Optimized for search from the structure up, not patched on at the end">Optimizado para buscadores desde la estructura, no como un parche al final</li>
+          <li data-es="Formularios, WhatsApp Business y pasarela de pago integrados" data-en="Forms, WhatsApp Business and payment gateway integrated">Formularios, WhatsApp Business y pasarela de pago integrados</li>
+          <li data-es="Datos estructurados (schema.org) para que Google entienda de qué trata cada página" data-en="Structured data (schema.org) so Google understands what each page is about">Datos estructurados (schema.org) para que Google entienda de qué trata cada página</li>
+        </ul>
+        <div class="time" data-es="OPTIMIZADO PARA CONVERSIÓN, NO SOLO PARA VERSE BIEN" data-en="OPTIMIZED FOR CONVERSION, NOT JUST LOOKS">OPTIMIZADO PARA CONVERSIÓN, NO SOLO PARA VERSE BIEN</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="para-quien">
+  <div class="shell">
+    <div class="sec-head rev">
+      <div class="eyebrow" data-es="Para quién es" data-en="Who it's for">Para quién es</div>
+      <h2 data-es="¿Le sirve este servicio?" data-en="Is this service a fit?">¿Le sirve este servicio?</h2>
+      <p data-es="Antes de escribirnos, una idea de si esto le conviene ahora mismo." data-en="Before you write to us, a sense of whether this is right for you right now.">Antes de escribirnos, una idea de si esto le conviene ahora mismo.</p>
+    </div>
+    <div class="two">
+      <div class="pane rev">
+        <h3 data-es="Le sirve si" data-en="It's a fit if">Le sirve si</h3>
+        <ul class="tick">
+          <li data-es="No tiene sitio propio o el actual no representa lo que vende hoy" data-en="You don't have a site, or your current one no longer represents what you sell">No tiene sitio propio o el actual no representa lo que vende hoy</li>
+          <li data-es="Quiere dejar de depender solo de redes sociales para que lo encuentren" data-en="You want to stop relying only on social media for people to find you">Quiere dejar de depender solo de redes sociales para que lo encuentren</li>
+          <li data-es="Necesita que el sitio cargue rápido y aparezca en Google, no solo que se vea bien" data-en="You need the site to load fast and show up on Google, not just look good">Necesita que el sitio cargue rápido y aparezca en Google, no solo que se vea bien</li>
+        </ul>
+      </div>
+      <div class="pane rev">
+        <h3 data-es="Puede no ser el momento si" data-en="It may not be the time if">Puede no ser el momento si</h3>
+        <ul class="tick">
+          <li data-es="Ya tiene un sitio que funciona bien y solo necesita ajustes menores (eso se cotiza aparte, más rápido)" data-en="You already have a site that works well and only needs minor tweaks (quoted separately, faster)">Ya tiene un sitio que funciona bien y solo necesita ajustes menores (eso se cotiza aparte, más rápido)</li>
+          <li data-es="Solo necesita una landing puntual para una campaña de corta duración" data-en="You only need a one-off landing page for a short campaign">Solo necesita una landing puntual para una campaña de corta duración</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="shell" style="max-width:820px">
+    <div class="sec-head rev">
+      <div class="eyebrow" data-es="Preguntas" data-en="Questions">Preguntas</div>
+      <h2 data-es="Sobre sitios web." data-en="About websites.">Sobre sitios web.</h2>
+    </div>
+    <details open>
+      <summary data-es="¿El dominio y el hosting quedan a mi nombre?" data-en="Do the domain and hosting stay under my name?">¿El dominio y el hosting quedan a mi nombre?</summary>
+      <div class="faq-body"><p data-es="Sí. Igual que con el software a medida, el dominio, el hosting y los accesos quedan registrados a nombre de su empresa desde el primer día." data-en="Yes. Just like with custom software, the domain, hosting and access are registered under your company from day one.">Sí. Igual que con el software a medida, el dominio, el hosting y los accesos quedan registrados a nombre de su empresa desde el primer día.</p></div>
+    </details>
+    <details>
+      <summary data-es="¿Puedo pedir cambios después de la entrega?" data-en="Can I request changes after delivery?">¿Puedo pedir cambios después de la entrega?</summary>
+      <div class="faq-body"><p data-es="Sí, incluimos dos rondas de ajustes durante el proyecto. Después de la entrega, los cambios de contenido los hace su propio equipo desde el panel; cambios de diseño o de estructura se cotizan aparte o quedan cubiertos si contrata soporte mensual." data-en="Yes, we include two rounds of adjustments during the project. After delivery, content changes are made by your own team from the panel; design or structural changes are quoted separately or covered if you take monthly support.">Sí, incluimos dos rondas de ajustes durante el proyecto. Después de la entrega, los cambios de contenido los hace su propio equipo desde el panel; cambios de diseño o de estructura se cotizan aparte o quedan cubiertos si contrata soporte mensual.</p></div>
+    </details>
+    <details>
+      <summary data-es="¿Cuántas páginas incluye?" data-en="How many pages are included?">¿Cuántas páginas incluye?</summary>
+      <div class="faq-body"><p data-es="Depende del alcance que definamos juntos: desde una landing de una sola página hasta un sitio institucional con varias secciones. El número exacto de páginas queda en la propuesta escrita." data-en="It depends on the scope we define together: from a single-page landing to an institutional site with several sections. The exact number of pages is set in the written proposal.">Depende del alcance que definamos juntos: desde una landing de una sola página hasta un sitio institucional con varias secciones. El número exacto de páginas queda en la propuesta escrita.</p></div>
+    </details>
+  </div>
+</section>
+
+<section class="band" id="contacto">
+  <div class="shell" style="max-width:820px;text-align:left">
+    <div class="sec-head rev" style="margin-bottom:28px">
+      <div class="eyebrow" data-es="Hablemos" data-en="Let's talk">Hablemos</div>
+      <h2 data-es="¿Su negocio todavía no tiene un sitio a su medida?" data-en="Does your business still not have a site built for it?">¿Su negocio todavía no tiene un sitio a su medida?</h2>
+      <p data-es="Cuéntenos qué necesita mostrar y a quién. Le respondemos con alcance y precio cerrado el mismo día hábil." data-en="Tell us what you need to show and to whom. We reply with scope and a fixed price the same business day.">Cuéntenos qué necesita mostrar y a quién. Le respondemos con alcance y precio cerrado el mismo día hábil.</p>
+    </div>
+    <a class="btn" href="/#contacto" data-es="Hablemos de su proyecto" data-en="Let's talk about your project">Hablemos de su proyecto</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="shell foot">
+    <div class="foot-brand">ROULT</div>
+    <div class="foot-meta" data-es="LatAm y Estados Unidos" data-en="LatAm and the United States">LatAm y Estados Unidos</div>
+    <div class="foot-links">
+      <a href="/#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+      <a href="/privacidad.html" data-es="Privacidad" data-en="Privacy">Privacidad</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── titular palabra por palabra ──
+function cascada(){
+  var h = document.querySelector('.hero h1');
+  if(!h) return;
+  var texto = h.textContent.replace(/\.$/,'');
+  var palabras = texto.trim().split(/\s+/);
+  h.innerHTML = palabras.map(function(w,i){
+    return '<span class="pal" style="--i:'+i+'">'+w+'</span>';
+  }).join(' ');
+}
+cascada();
+
+// ── FAQ: acordeón animado con transición CSS de altura en píxeles ──
+// nada de WAAPI ni del truco de grid-rows: en este tipo de entornos ninguno de
+// los dos resultó confiable (onfinish no siempre dispara, y con dos acordeones
+// animando a la vez la medición se descuadraba). Esto es lo mismo que se usa
+// hace años para animar altura: fijar alto inicial en px, forzar reflow, fijar
+// alto final en px y dejar que la transición interpole. Un setTimeout con la
+// misma duración avisa cuándo terminó, sin depender de ningún evento.
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = [].slice.call(document.querySelectorAll('#faq details'));
+  var DUR = 400, EASE = 'cubic-bezier(.22,.8,.36,1)';
+
+  items.forEach(function(details){
+    var summary = details.querySelector('summary');
+    var body = details.querySelector('.faq-body');
+
+    summary.addEventListener('click', function(e){
+      e.preventDefault();
+      if(reduce){
+        details.open = !details.open;
+        if(details.open) items.forEach(function(o){ if(o!==details) o.open=false; });
+        return;
+      }
+      if(details.open) shrink(details, summary);
+      else{
+        items.forEach(function(other){
+          if(other!==details && other.open) shrink(other, other.querySelector('summary'));
+        });
+        grow(details, summary, body);
+      }
+    });
+  });
+
+  function paddingY(details){
+    var s = getComputedStyle(details);
+    return parseFloat(s.paddingTop) + parseFloat(s.paddingBottom);
+  }
+
+  function freeze(details){
+    clearTimeout(details._cleanupTimer);
+    details.style.transition = 'none';
+    details.style.overflow = 'hidden';
+    var startH = details.getBoundingClientRect().height;
+    details.style.height = startH + 'px';
+    void details.offsetHeight; // fuerza el reflow antes de animar
+    return startH;
+  }
+
+  function animateTo(details, endH, after){
+    details.style.transition = 'height '+DUR+'ms '+EASE;
+    requestAnimationFrame(function(){ details.style.height = endH + 'px'; });
+    details._cleanupTimer = setTimeout(function(){ after(); cleanup(details); }, DUR);
+  }
+
+  function grow(details, summary, body){
+    freeze(details);
+    details.open = true;
+    var endH = paddingY(details) + summary.getBoundingClientRect().height + body.getBoundingClientRect().height;
+    animateTo(details, endH, function(){});
+  }
+
+  function shrink(details, summary){
+    freeze(details);
+    var endH = paddingY(details) + summary.getBoundingClientRect().height;
+    animateTo(details, endH, function(){ details.open = false; });
+  }
+
+  function cleanup(details){
+    details.style.height = '';
+    details.style.overflow = '';
+    details.style.transition = '';
+  }
+})();
+
+// ── formulario de contacto: arma un correo ordenado hacia contact@roult.us ──
+(function(){
+  var form = document.getElementById('form-contacto');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var nombre = form.elements['Nombre'].value.trim();
+    var correo = form.elements['Correo'].value.trim();
+    var mensaje = form.elements['Mensaje'].value.trim();
+    var asunto = 'Nuevo contacto desde roult.us — ' + nombre;
+    var cuerpo =
+      'Nuevo mensaje desde el formulario de contacto de roult.us\n' +
+      '——————————————————————————\n\n' +
+      'Nombre:  ' + nombre + '\n' +
+      'Correo:  ' + correo + '\n\n' +
+      'Mensaje:\n' + mensaje + '\n';
+    window.location.href = 'mailto:contact@roult.us?subject=' + encodeURIComponent(asunto) + '&body=' + encodeURIComponent(cuerpo);
+  });
+})();
+
+// ── revelar al hacer scroll ──
+(function(){
+  var sel=['.sec-head','.pane','.step','.commit>div','.escribe','.two>*','.meta>div','.medida'];
+  var els=[];
+  sel.forEach(function(q){ document.querySelectorAll(q).forEach(function(e){ if(!e.classList.contains('rev')) e.classList.add('rev'); els.push(e); }); });
+  document.querySelectorAll('.rev').forEach(function(e){ if(els.indexOf(e)<0) els.push(e); });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('vis'); io.unobserve(en.target);} }); },{rootMargin:'0px 0px -6% 0px',threshold:.06});
+    els.forEach(function(e){ io.observe(e); });
+  } else { els.forEach(function(e){ e.classList.add('vis'); }); }
+})();
+
+// ── cabecera que encoge ──
+(function(){
+  var h=document.querySelector('header');
+  var f=function(){ h.classList.toggle('encogida', scrollY>60); };
+  f(); addEventListener('scroll',f,{passive:true});
+})();
+
+// ── botones magnéticos (solo mouse) ──
+if(matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.querySelectorAll('.btn').forEach(function(b){
+    b.addEventListener('mousemove',function(e){
+      var r=b.getBoundingClientRect();
+      b.style.transform='translate('+((e.clientX-r.left)/r.width-.5)*7+'px,'+((e.clientY-r.top)/r.height-.5)*5+'px)';
+    });
+    b.addEventListener('mouseleave',function(){ b.style.transform=''; });
+  });
+}
+
+// ── idioma con fundido ──
+var lang='es';
+var btn=document.getElementById('lang');
+function setLang(l, animate){
+  function aplicar(){
+    lang = l;
+    btn.textContent = lang==='es' ? 'EN' : 'ES';
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-es]').forEach(function(el){
+      var v = el.getAttribute('data-'+lang);
+      if(v!=null) el.innerHTML = v;
+    });
+    document.querySelectorAll('[data-ph-es]').forEach(function(el){
+      var v = el.getAttribute('data-ph-'+lang);
+      if(v!=null) el.placeholder = v;
+    });
+    cascada();
+  }
+  if(animate){
+    document.documentElement.classList.add('lang-cambia');
+    setTimeout(function(){ aplicar(); document.documentElement.classList.remove('lang-cambia'); },190);
+  } else {
+    aplicar();
+  }
+}
+btn.addEventListener('click',function(){ setLang(lang==='es'?'en':'es', true); });
+
+// ── idioma por defecto según el navegador del visitante ──
+// ponytail: navigator.language como proxy de país (EE.UU. navega mayormente en
+// inglés, LatAm en español); sin llamada a servicio de geolocalización por IP.
+var idiomaNavegador = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
+if(idiomaNavegador.indexOf('en')===0) setLang('en', false);
+</script>
+</body>
+</html>
