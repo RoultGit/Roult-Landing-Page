@@ -733,7 +733,7 @@ document.querySelectorAll('.pila').forEach(function(pila){
       var v = c.querySelector('video');
       if (v) {
         if (p === 0 && !quieto) { var r = v.play(); if (r && r.catch) r.catch(function(){}); }
-        else { v.pause(); }
+        else { v.pause(); v.currentTime = 0; }   // al irse atras vuelve a cero: reaparece desde el principio
       }
       c.setAttribute('aria-hidden', p ? 'true' : 'false');
     });
