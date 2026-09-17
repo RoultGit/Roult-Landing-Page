@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/svg+xml" href="/roult-icon-4f.svg">
-<title>Software a medida para su empresa · Roult</title>
-<meta name="description" content="Aplicaciones y sistemas internos a la medida de su operación, con integraciones a su ERP, WhatsApp Business y pasarela de pago. Propuesta en 5 días hábiles.">
-<link rel="canonical" href="https://www.roult.us/software-a-medida">
+<title>Trabajos · Roult</title>
+<meta name="description" content="Proyectos que Roult diseñó, construyó y puso en producción: la web de ACIS, Gastify y RoultCRM. Qué se construyó y con qué se resolvió cada uno.">
+<link rel="canonical" href="https://www.roult.us/trabajos">
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.roult.us/software-a-medida">
-<meta property="og:title" content="Software a medida para su empresa · Roult">
-<meta property="og:description" content="Aplicaciones y sistemas internos diseñados en función de cómo opera su equipo, con integraciones a lo que ya usa.">
+<meta property="og:url" content="https://www.roult.us/trabajos">
+<meta property="og:title" content="Trabajos · Roult">
+<meta property="og:description" content="Proyectos que Roult diseñó, construyó y puso en producción.">
 <meta property="og:image" content="https://www.roult.us/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -23,7 +23,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter+Tight:wght@400;500;600&family=DM+Mono:wght@400;500&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","serviceType":"Desarrollo de software a medida","provider":{"@type":"ProfessionalService","name":"Roult","url":"https://www.roult.us/"},"areaServed":[{"@type":"Country","name":"Peru"},{"@type":"Country","name":"United States"}],"description":"Aplicaciones y sistemas internos diseñados a la medida de la operación de cada negocio, con integraciones a ERP, WhatsApp Business y pasarelas de pago."}
+{"@context":"https://schema.org","@type":"CollectionPage","name":"Trabajos de Roult","url":"https://www.roult.us/trabajos","description":"Proyectos que Roult diseñó, construyó y puso en producción.","publisher":{"@type":"ProfessionalService","name":"Roult","url":"https://www.roult.us/"},"hasPart":[{"@type":"WebSite","name":"ACIS","url":"https://www.roult.us/trabajos#acis","about":"Sitio de una software factory de Lima"},{"@type":"SoftwareApplication","name":"Gastify","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://www.roult.us/gastify"},{"@type":"SoftwareApplication","name":"RoultCRM","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://www.roult.us/trabajos#roultcrm"}]}
 </script>
 <style>
 :root{
@@ -285,6 +285,58 @@ header.encogida .nav{height:56px}
 html.lang-cambia [data-es]{opacity:0;transition:opacity .18s ease}
 html [data-es]{transition:opacity .18s ease}
 
+
+
+
+/* ---- trabajos ---- */
+.hero.indice-hero{padding:76px 0 0}
+.indice-hero h1{max-width:13ch}
+.indice-hero .lede{margin-bottom:46px}
+
+.indice{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--line)}
+.indice a{display:flex;align-items:baseline;gap:16px;padding:16px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.ix-tipo{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-40);flex:none;width:11ch}
+.ix-nom{font-family:var(--display);font-weight:700;font-size:clamp(20px,2.4vw,27px);letter-spacing:-.025em;flex:none}
+.ix-fill{flex:1;min-width:20px;border-bottom:1px dotted var(--line);transform:translateY(-5px)}
+.ix-anio{font-family:var(--mono);font-size:12px;color:var(--ink-40);flex:none}
+.indice a:hover .ix-nom,.indice a:focus-visible .ix-nom{color:var(--cobalt)}
+.indice a:hover .ix-fill{border-bottom-color:var(--cobalt)}
+@media(max-width:620px){
+  .indice a{flex-wrap:wrap;gap:6px 12px}
+  .ix-tipo{width:auto;order:1}
+  .ix-anio{order:2;margin-left:auto}
+  .ix-nom{order:3;flex-basis:100%}
+  .ix-fill{display:none}
+}
+
+.tr-rol{font-family:var(--mono);font-size:11px;color:var(--cobalt);letter-spacing:.1em;text-transform:uppercase;margin:0 0 10px}
+.tr-meta{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 0}
+.tr-meta span{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-70);border:1px solid var(--line);padding:4px 9px}
+
+/* pila de pantallas: una encima de otra, el clic manda la de adelante al fondo.
+   --ar sale de la captura mas alta del grupo, asi ninguna se recorta */
+.pila{position:relative;margin:0 26px 0 0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+/* la carta de adelante va en flujo y define la altura: ninguna captura queda con hueco ni recortada */
+.pila .frame.adelante{position:relative;inset:auto}
+.pila .frame{position:absolute;inset:0;display:flex;flex-direction:column;border-radius:10px;overflow:hidden;background:var(--bone-2);
+             transition:transform .45s cubic-bezier(.22,.8,.36,1),box-shadow .45s ease}
+.pila .frame img,.pila .frame video{flex:1;min-height:0;width:100%;object-fit:contain;object-position:top center;display:block}
+.pila:hover .frame:first-child,.pila:focus-visible .frame:first-child{box-shadow:0 30px 60px -28px rgba(17,19,24,.5)}
+.pila:focus-visible{outline:2.5px solid var(--cobalt);outline-offset:8px}
+
+.pila-pie{display:flex;align-items:center;gap:14px;margin-top:16px;font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:var(--ink-40)}
+.pila-n{color:var(--ink);border:1px solid var(--line);padding:3px 8px}
+.pila-pista{text-transform:uppercase}
+.pila:hover+.pila-pie .pila-pista{color:var(--cobalt)}
+@media(prefers-reduced-motion:reduce){.pila .frame{transition:none}}
+@media(max-width:900px){.pila{margin-right:18px}}
+
+.ficha{margin:0}
+.ficha>div{display:grid;grid-template-columns:13ch 1fr;gap:22px;padding:16px 0;border-bottom:1px solid var(--line)}
+.ficha>div:first-child{border-top:1px solid var(--line)}
+.ficha dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-40);padding-top:3px}
+.ficha dd{margin:0;font-size:15.5px;color:var(--ink-70)}
+@media(max-width:620px){.ficha>div{grid-template-columns:1fr;gap:5px}}
 </style>
 </head>
 <body>
@@ -326,109 +378,138 @@ html [data-es]{transition:opacity .18s ease}
 
 <main id="main">
 
-<div class="hero" style="padding-bottom:70px">
+<div class="hero indice-hero">
   <div class="shell">
-    <div style="max-width:70ch">
-      <div class="eyebrow" data-es="Servicio · Software a medida" data-en="Service · Custom software">Servicio · Software a medida</div>
-      <h1 data-es="Software a medida para su empresa" data-en="Custom software for your business">Software a medida para su empresa</h1>
-      <p class="lede" style="max-width:60ch" data-es="Aplicaciones y sistemas internos diseñados en función de cómo opera su equipo, no al revés. Arquitectura preparada para crecer, código a su nombre desde el día uno." data-en="Applications and internal systems built around how your team works, not the other way around. Architecture designed to grow, code under your name from day one.">Aplicaciones y sistemas internos diseñados en función de cómo opera su equipo, no al revés. Arquitectura preparada para crecer, código a su nombre desde el día uno.</p>
-      <div class="cta-row">
-        <a class="btn" href="/#contacto" data-es="Hablemos de su proyecto" data-en="Let's talk about your project">Hablemos de su proyecto</a>
-        <a class="btn ghost" href="/" data-es="Volver al inicio" data-en="Back to home">Volver al inicio</a>
-      </div>
-    </div>
+    <p class="eyebrow" data-es="Trabajos" data-en="Work">Trabajos</p>
+    <h1 data-es="Lo que construimos y pusimos en producción." data-en="What we built and put into production.">Lo que construimos y pusimos en producción.</h1>
+    <p class="lede" data-es="Tres proyectos, cada uno con su problema y su decisión técnica. Sin maquetas ni trabajos de relleno." data-en="Three projects, each with its problem and its technical decision. No mockups, no filler work.">Tres proyectos, cada uno con su problema y su decisión técnica. Sin maquetas ni trabajos de relleno.</p>
+
+    <ol class="indice">
+      <li><a href="#acis">
+        <span class="ix-tipo" data-es="Sitio web" data-en="Website">Sitio web</span>
+        <span class="ix-nom">ACIS</span>
+        <span class="ix-fill"></span>
+        <span class="ix-anio">2026</span>
+      </a></li>
+      <li><a href="#gastify">
+        <span class="ix-tipo" data-es="Software" data-en="Software">Software</span>
+        <span class="ix-nom">Gastify</span>
+        <span class="ix-fill"></span>
+        <span class="ix-anio">2026</span>
+      </a></li>
+      <li><a href="#roultcrm">
+        <span class="ix-tipo" data-es="Software" data-en="Software">Software</span>
+        <span class="ix-nom">RoultCRM</span>
+        <span class="ix-fill"></span>
+        <span class="ix-anio">2026</span>
+      </a></li>
+    </ol>
   </div>
 </div>
 
-<section id="incluye">
+<section id="obra">
   <div class="shell">
-    <div class="sec-head rev">
-      <div class="eyebrow" data-es="Qué construimos" data-en="What we build">Qué construimos</div>
-      <h2 data-es="Sistemas pensados desde su operación, no desde una plantilla." data-en="Systems designed around your operation, not a template.">Sistemas pensados desde su operación, no desde una plantilla.</h2>
-      <p data-es="Nada de licencias por usuario que suben solas ni funciones que nunca va a usar. El sistema se arma alrededor de cómo trabaja su equipo hoy." data-en="No per-seat licenses that creep up on their own, no features you'll never touch. The system is built around how your team actually works today.">Nada de licencias por usuario que suben solas ni funciones que nunca va a usar. El sistema se arma alrededor de cómo trabaja su equipo hoy.</p>
-    </div>
-    <div class="two">
-      <div class="pane rev">
-        <div class="kicker" data-es="Sistemas internos" data-en="Internal systems">Sistemas internos</div>
-        <h3 data-es="Gestión, inventario y operación" data-en="Management, inventory and operations">Gestión, inventario y operación</h3>
-        <ul class="tick">
-          <li data-es="Paneles de gestión, inventario, ventas o control de operaciones a la medida de su flujo de trabajo" data-en="Management, inventory, sales or operations dashboards built around your actual workflow">Paneles de gestión, inventario, ventas o control de operaciones a la medida de su flujo de trabajo</li>
-          <li data-es="Roles y permisos ajustados a cómo está organizado su equipo, no a una plantilla genérica" data-en="Roles and permissions matched to how your team is actually organized, not a generic template">Roles y permisos ajustados a cómo está organizado su equipo, no a una plantilla genérica</li>
-          <li data-es="Reportes y tableros con los indicadores que su negocio realmente usa para decidir" data-en="Reports and dashboards built around the metrics your business actually uses to decide">Reportes y tableros con los indicadores que su negocio realmente usa para decidir</li>
-        </ul>
-        <div class="time" data-es="ARQUITECTURA PENSADA PARA CRECER" data-en="ARCHITECTURE DESIGNED TO GROW">ARQUITECTURA PENSADA PARA CRECER</div>
-      </div>
-      <div class="pane rev">
-        <div class="kicker" data-es="Integraciones" data-en="Integrations">Integraciones</div>
-        <h3 data-es="Con lo que ya usa hoy" data-en="With what you already use">Con lo que ya usa hoy</h3>
-        <ul class="tick">
-          <li data-es="Conexión con su ERP, CRM o sistema contable existente, sin migrar todo desde cero" data-en="Connects to your existing ERP, CRM or accounting system, no starting from scratch">Conexión con su ERP, CRM o sistema contable existente, sin migrar todo desde cero</li>
-          <li data-es="WhatsApp Business, pasarelas de pago y facturación electrónica" data-en="WhatsApp Business, payment gateways and electronic invoicing">WhatsApp Business, pasarelas de pago y facturación electrónica</li>
-          <li data-es="APIs para que sus propios sistemas se hablen entre sí sin trabajo manual de por medio" data-en="APIs so your own systems talk to each other without manual work in between">APIs para que sus propios sistemas se hablen entre sí sin trabajo manual de por medio</li>
-        </ul>
-        <div class="time" data-es="CÓDIGO E INFRAESTRUCTURA A SU NOMBRE" data-en="CODE AND INFRASTRUCTURE UNDER YOUR NAME">CÓDIGO E INFRAESTRUCTURA A SU NOMBRE</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="para-quien">
-  <div class="shell">
-    <div class="sec-head rev">
-      <div class="eyebrow" data-es="Para quién es" data-en="Who it's for">Para quién es</div>
-      <h2 data-es="¿Le sirve este servicio?" data-en="Is this service a fit?">¿Le sirve este servicio?</h2>
-      <p data-es="Antes de escribirnos, una idea de si esto le conviene ahora mismo." data-en="Before you write to us, a sense of whether this is right for you right now.">Antes de escribirnos, una idea de si esto le conviene ahora mismo.</p>
-    </div>
-    <div class="two">
-      <div class="pane rev">
-        <h3 data-es="Le sirve si" data-en="It's a fit if">Le sirve si</h3>
-        <ul class="tick">
-          <li data-es="Ya intentó resolverlo con hojas de cálculo o WhatsApp y dejó de alcanzarle" data-en="You've tried spreadsheets or WhatsApp for this and it stopped being enough">Ya intentó resolverlo con hojas de cálculo o WhatsApp y dejó de alcanzarle</li>
-          <li data-es="Su proceso es específico de su negocio y no encaja en un software genérico" data-en="Your process is specific to your business and doesn't fit generic software">Su proceso es específico de su negocio y no encaja en un software genérico</li>
-          <li data-es="Necesita que el sistema crezca con usted, no que lo limite" data-en="You need the system to grow with you, not hold you back">Necesita que el sistema crezca con usted, no que lo limite</li>
-        </ul>
+    <article class="product" id="acis">
+      <div class="product-copy">
+        <p class="tr-rol" data-es="Diseño y desarrollo" data-en="Design and development">Diseño y desarrollo</p>
+        <h2 class="product-name">ACIS</h2>
+        <p class="product-tag" data-es="Software factory en Lima que le vende al sector privado y al Estado peruano." data-en="A software factory in Lima selling to the private sector and the Peruvian state.">Software factory en Lima que le vende al sector privado y al Estado peruano.</p>
+        <p data-es="Una sola página que recorre servicios, proceso, su producto Trakia, clientes y contacto, para que un comprador entienda la propuesta sin navegar. Todo el sitio es negro sobre hueso: el único color es un rojo que aparece en el punto de la marca y en la numeración." data-en="A single page running through services, process, their product Trakia, clients and contact, so a buyer understands the offer without navigating. The whole site is black on bone: the only color is a red that shows up in the wordmark&#39;s dot and in the numbering.">Una sola página que recorre servicios, proceso, su producto Trakia, clientes y contacto, para que un comprador entienda la propuesta sin navegar. Todo el sitio es negro sobre hueso: el único color es un rojo que aparece en el punto de la marca y en la numeración.</p>
+        <div class="tr-meta"><span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind</span></div>
       </div>
-      <div class="pane rev">
-        <h3 data-es="Puede no ser el momento si" data-en="It may not be the time if">Puede no ser el momento si</h3>
-        <ul class="tick">
-          <li data-es="Recién está validando su modelo de negocio y todo puede cambiar de rumbo" data-en="You're still validating your business model and things may change direction">Recién está validando su modelo de negocio y todo puede cambiar de rumbo</li>
-          <li data-es="Un producto ya armado, como los de nuestra suite SaaS, resuelve lo que necesita" data-en="An off-the-shelf product, like the ones in our SaaS suite, already solves what you need">Un producto ya armado, como los de nuestra suite SaaS, resuelve lo que necesita</li>
-          <li data-es="Todavía no tiene claro qué proceso quiere sistematizar" data-en="You're not yet clear on which process you want to systematize">Todavía no tiene claro qué proceso quiere sistematizar</li>
-        </ul>
+      <div class="product-shot">
+      <div class="pila" role="button" tabindex="0"
+           aria-label="Pantallas del proyecto. Active para ver la siguiente.">
+        <div class="frame">
+          <div class="frame-bar"><i></i><i></i><i></i><span data-es="Portada" data-en="Home">Portada</span></div>
+          <img src="/capturas/acis.jpg" width="1800" height="1035" loading="lazy" decoding="async" alt="Portada del sitio de ACIS: el titular «Todo el software que tu empresa necesita» en negro sobre fondo hueso, con la lista de servicios y dos botones debajo.">
+        </div>
+        <div class="frame">
+          <div class="frame-bar"><i></i><i></i><i></i><span data-es="Servicios" data-en="Services">Servicios</span></div>
+          <img src="/capturas/acis-servicios.jpg" width="1280" height="860" loading="lazy" decoding="async" alt="Sección de servicios: seis capacidades numeradas a la izquierda y el detalle de la seleccionada a la derecha.">
+        </div>
+        <div class="frame">
+          <div class="frame-bar"><i></i><i></i><i></i><span data-es="Menos fricción" data-en="Less friction">Menos fricción</span></div>
+          <video src="/capturas/acis-friccion.mp4" width="1440" height="900" muted loop playsinline preload="metadata" aria-label="Animación de la sección «Menos fricción. Más control. Antes.» del sitio de ACIS."></video>
+        </div>
+        <div class="frame">
+          <div class="frame-bar"><i></i><i></i><i></i><span data-es="Proceso" data-en="Process">Proceso</span></div>
+          <img src="/capturas/acis-proceso.jpg" width="1280" height="890" loading="lazy" decoding="async" alt="Sección de proceso: cuatro etapas con su plazo y, debajo, el avance de un proyecto semana a semana.">
+        </div>
+        <div class="frame">
+          <div class="frame-bar"><i></i><i></i><i></i><span data-es="Clientes" data-en="Clients">Clientes</span></div>
+          <video src="/capturas/acis-clientes.mp4" width="1440" height="900" muted loop playsinline preload="metadata" aria-label="Animación de la sección «Lo que dicen nuestros clientes» del sitio de ACIS."></video>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+      <p class="pila-pie"><span class="pila-n">1/5</span><span class="pila-pista" data-es="Clic para ver la siguiente" data-en="Click for the next one">Clic para ver la siguiente</span></p>
+      </div>
+    </article>
 
-<section id="faq">
-  <div class="shell" style="max-width:820px">
-    <div class="sec-head rev">
-      <div class="eyebrow" data-es="Preguntas" data-en="Questions">Preguntas</div>
-      <h2 data-es="Sobre software a medida." data-en="About custom software.">Sobre software a medida.</h2>
-    </div>
-    <details open>
-      <summary data-es="¿Cuánto dura un proyecto típico?" data-en="How long does a typical project take?">¿Cuánto dura un proyecto típico?</summary>
-      <div class="faq-body"><p data-es="Depende del alcance: un módulo puntual puede tomar de 3 a 4 semanas, un sistema completo de gestión puede tomar de 2 a 4 meses. El plazo exacto queda por escrito en la propuesta, antes de empezar." data-en="It depends on scope: a single module can take 3 to 4 weeks, a full management system can take 2 to 4 months. The exact timeline is in the written proposal before we start.">Depende del alcance: un módulo puntual puede tomar de 3 a 4 semanas, un sistema completo de gestión puede tomar de 2 a 4 meses. El plazo exacto queda por escrito en la propuesta, antes de empezar.</p></div>
-    </details>
-    <details>
-      <summary data-es="¿Qué pasa si mi proceso cambia a mitad del desarrollo?" data-en="What if my process changes mid-development?">¿Qué pasa si mi proceso cambia a mitad del desarrollo?</summary>
-      <div class="faq-body"><p data-es="Incluimos dos rondas de ajustes durante el proyecto para justamente absorber esos cambios. Si el cambio es mayor y afecta el alcance original, se conversa y se cotiza aparte, siempre por escrito antes de aplicarlo." data-en="We include two rounds of adjustments during the project to absorb exactly that. If the change is bigger and affects the original scope, we discuss it and quote it separately, always in writing before applying it.">Incluimos dos rondas de ajustes durante el proyecto para justamente absorber esos cambios. Si el cambio es mayor y afecta el alcance original, se conversa y se cotiza aparte, siempre por escrito antes de aplicarlo.</p></div>
-    </details>
-    <details>
-      <summary data-es="¿Necesito tener todo definido antes de empezar?" data-en="Do I need everything defined before we start?">¿Necesito tener todo definido antes de empezar?</summary>
-      <div class="faq-body"><p data-es="No. En la primera conversación ayudamos a aterrizar qué necesita el sistema; la propuesta técnica que le enviamos a los 5 días hábiles ya incluye ese alcance definido." data-en="No. In the first conversation we help nail down what the system needs; the technical proposal we send within 5 business days already includes that defined scope.">No. En la primera conversación ayudamos a aterrizar qué necesita el sistema; la propuesta técnica que le enviamos a los 5 días hábiles ya incluye ese alcance definido.</p></div>
-    </details>
+    <article class="product reverse" id="gastify">
+      <div class="product-copy">
+        <p class="tr-rol" data-es="Producto propio" data-en="Our own product">Producto propio</p>
+        <h2 class="product-name">Gastify</h2>
+        <p class="product-tag" data-es="Rendición de gastos por WhatsApp, validada contra SUNAT." data-en="Expense reporting over WhatsApp, validated against SUNAT.">Rendición de gastos por WhatsApp, validada contra SUNAT.</p>
+        <p data-es="El colaborador manda la foto del comprobante por WhatsApp y termina ahí. El sistema lee el documento, lo valida contra SUNAT y lo deja en la cola de aprobación con su monto y su categoría. Nadie transcribe boletas a una hoja de cálculo." data-en="The employee sends a photo of the receipt over WhatsApp and is done. The system reads the document, validates it against SUNAT and drops it into the approval queue with its amount and category. Nobody retypes receipts into a spreadsheet.">El colaborador manda la foto del comprobante por WhatsApp y termina ahí. El sistema lee el documento, lo valida contra SUNAT y lo deja en la cola de aprobación con su monto y su categoría. Nadie transcribe boletas a una hoja de cálculo.</p>
+        <div class="tr-meta"><span>WhatsApp</span><span>SUNAT</span><span data-es="Aprobaciones" data-en="Approvals">Aprobaciones</span></div>
+        <div class="product-cta"><a class="btn ghost sm" href="/gastify" data-es="Ver Gastify" data-en="See Gastify">Ver Gastify</a></div>
+      </div>
+      <div class="product-shot">
+      <div class="pila" role="button" tabindex="0"
+           aria-label="Pantallas del proyecto. Active para ver la siguiente.">
+        <div class="frame">
+          <div class="frame-bar"><i></i><i></i><i></i><span data-es="Panel" data-en="Dashboard">Panel</span></div>
+          <img src="/productos/gastify/gastify-dashboard.jpg" width="1555" height="790" loading="lazy" decoding="async" alt="Panel de Gastify: montos por aprobar, aprobados y total registrado en soles, gráfico por mes y desglose por categoría.">
+        </div>
+        <div class="frame">
+          <div class="frame-bar"><i></i><i></i><i></i><span data-es="Aprobaciones" data-en="Approvals">Aprobaciones</span></div>
+          <img src="/productos/gastify/gastify-aprobaciones.jpg" width="1555" height="790" loading="lazy" decoding="async" alt="Pantalla de aprobaciones pendientes: cada gasto con su colaborador, proveedor, categoría, estado y monto, y los botones de aprobar o rechazar.">
+        </div>
+      </div>
+      <p class="pila-pie"><span class="pila-n">1/2</span><span class="pila-pista" data-es="Clic para ver la siguiente" data-en="Click for the next one">Clic para ver la siguiente</span></p>
+      </div>
+    </article>
+
+    <article class="product" id="roultcrm">
+      <div class="product-copy">
+        <p class="tr-rol" data-es="Producto propio" data-en="Our own product">Producto propio</p>
+        <h2 class="product-name">RoultCRM</h2>
+        <p class="product-tag" data-es="CRM multi-tenant para equipos de venta." data-en="Multi-tenant CRM for sales teams.">CRM multi-tenant para equipos de venta.</p>
+        <p data-es="Convierte un lead en empresa y contacto en una sola operación, sin dejar registros a medias si algo falla. Varias empresas comparten la misma instalación sin ver los datos de las otras." data-en="It turns a lead into a company and contact in one operation, leaving no half-written records if something fails. Several companies share one installation without seeing each other&#39;s data.">Convierte un lead en empresa y contacto en una sola operación, sin dejar registros a medias si algo falla. Varias empresas comparten la misma instalación sin ver los datos de las otras.</p>
+        <div class="tr-meta"><span>Node</span><span>Prisma</span><span>React</span><span>Supabase</span></div>
+      </div>
+      <div class="product-shot">
+      <div class="pila" role="button" tabindex="0"
+           aria-label="Pantallas del proyecto. Active para ver la siguiente.">
+        <div class="frame">
+          <div class="frame-bar"><i></i><i></i><i></i><span data-es="Pipeline" data-en="Pipeline">Pipeline</span></div>
+          <img src="/capturas/crm-pipeline.jpg" width="1440" height="693" loading="lazy" decoding="async" alt="Pipeline de RoultCRM: tablero por etapas —contacto, propuesta, negociación, adelanto, producción— con cada negocio, su empresa, su monto en soles o dólares y su vendedor.">
+        </div>
+        <div class="frame">
+          <div class="frame-bar"><i></i><i></i><i></i><span data-es="Tareas" data-en="Tasks">Tareas</span></div>
+          <img src="/capturas/crm-tareas.jpg" width="1440" height="832" loading="lazy" decoding="async" alt="Tablero de tareas de RoultCRM en tres columnas —por hacer, en curso y hecha— con prioridad, fecha, barra de avance y responsable en cada ficha.">
+        </div>
+        <div class="frame">
+          <div class="frame-bar"><i></i><i></i><i></i><span data-es="Calendario" data-en="Calendar">Calendario</span></div>
+          <img src="/capturas/crm-calendario.jpg" width="1440" height="815" loading="lazy" decoding="async" alt="Calendario mensual de RoultCRM con tareas, próximos pasos y cierres estimados distinguidos por color, y las tareas cumplidas tachadas.">
+        </div>
+      </div>
+      <p class="pila-pie"><span class="pila-n">1/3</span><span class="pila-pista" data-es="Clic para ver la siguiente" data-en="Click for the next one">Clic para ver la siguiente</span></p>
+      </div>
+    </article>
+
   </div>
 </section>
 
 <section class="band" id="contacto">
   <div class="shell" style="max-width:820px;text-align:left">
-    <div class="sec-head rev" style="margin-bottom:28px">
-      <div class="eyebrow" data-es="Hablemos" data-en="Let's talk">Hablemos</div>
-      <h2 data-es="¿Listo para dejar de improvisar con hojas de cálculo?" data-en="Ready to stop improvising with spreadsheets?">¿Listo para dejar de improvisar con hojas de cálculo?</h2>
-      <p data-es="Treinta minutos, sin costo y sin compromiso. Le respondemos con los siguientes pasos el mismo día hábil." data-en="Thirty minutes, free and with no commitment. We reply with next steps the same business day.">Treinta minutos, sin costo y sin compromiso. Le respondemos con los siguientes pasos el mismo día hábil.</p>
+    <div class="sec-head">
+      <p class="eyebrow" data-es="Contacto" data-en="Contact">Contacto</p>
+      <h2 data-es="¿Tiene un proyecto parecido a alguno de estos?" data-en="Do you have a project like one of these?">¿Tiene un proyecto parecido a alguno de estos?</h2>
+      <p data-es="Cuéntenos qué necesita resolver y le decimos si es algo que hacemos, cuánto toma y cuánto cuesta." data-en="Tell us what you need to solve and we&#39;ll tell you whether it&#39;s something we do, how long it takes and what it costs.">Cuéntenos qué necesita resolver y le decimos si es algo que hacemos, cuánto toma y cuánto cuesta.</p>
     </div>
-    <a class="btn" href="/#contacto" data-es="Hablemos de su proyecto" data-en="Let's talk about your project">Hablemos de su proyecto</a>
+    <a class="btn" href="/#contacto" style="background:var(--cobalt);border-color:var(--cobalt);color:#fff" data-es="Hablemos" data-en="Let&#39;s talk">Hablemos</a>
   </div>
 </section>
 
@@ -629,6 +710,37 @@ document.querySelectorAll('.tiene-menu').forEach(function(caja){
     if (e.key === 'Escape') { poner(false); disparador.focus(); }
   });
   document.addEventListener('click', function(e){ if (!caja.contains(e.target)) poner(false); });
+});
+
+// pila de pantallas: el clic manda la de adelante al fondo y sube la siguiente
+document.querySelectorAll('.pila').forEach(function(pila){
+  var cartas = [].slice.call(pila.querySelectorAll('.frame'));
+  var n = cartas.length;
+  if (n < 2) return;
+  var frente = 0;
+  var quieto = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var contador = pila.parentNode.querySelector('.pila-n');
+  function pintar(){
+    cartas.forEach(function(c,i){
+      var p = (i - frente + n) % n;            // 0 = adelante
+      c.style.zIndex = n - p;
+      c.style.transform = 'translate(' + (p*18) + 'px,' + (p*-18) + 'px) scale(' + (1 - p*0.04) + ')';
+      c.classList.toggle('adelante', p === 0);
+      var v = c.querySelector('video');
+      if (v) {
+        if (p === 0 && !quieto) { var r = v.play(); if (r && r.catch) r.catch(function(){}); }
+        else { v.pause(); }
+      }
+      c.setAttribute('aria-hidden', p ? 'true' : 'false');
+    });
+    if (contador) contador.textContent = (frente+1) + '/' + n;
+  }
+  function avanzar(){ frente = (frente+1) % n; pintar(); }
+  pila.addEventListener('click', avanzar);
+  pila.addEventListener('keydown', function(e){
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); avanzar(); }
+  });
+  pintar();
 });
 </script>
 </body>
