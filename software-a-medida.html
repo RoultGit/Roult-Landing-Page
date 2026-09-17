@@ -285,6 +285,45 @@ header.encogida .nav{height:56px}
 html.lang-cambia [data-es]{opacity:0;transition:opacity .18s ease}
 html [data-es]{transition:opacity .18s ease}
 
+
+/* menu de celular: hasta ahora .navlinks se ocultaba y no habia nada que lo reemplazara */
+.menu-btn{display:none;margin-left:10px;align-items:center;justify-content:center;width:38px;height:34px;
+          background:none;border:1px solid var(--line);cursor:pointer;padding:0}
+.menu-btn:hover{border-color:var(--ink)}
+.menu-ico,.menu-ico::before,.menu-ico::after{display:block;width:16px;height:1.5px;background:var(--ink);transition:transform .22s ease,opacity .22s ease}
+.menu-ico::before,.menu-ico::after{content:"";position:absolute}
+.menu-ico{position:relative}
+.menu-ico::before{transform:translateY(-5px)}
+.menu-ico::after{transform:translateY(5px)}
+header[data-menu="abierto"] .menu-ico{background:transparent}
+header[data-menu="abierto"] .menu-ico::before{transform:rotate(45deg)}
+header[data-menu="abierto"] .menu-ico::after{transform:rotate(-45deg)}
+
+@media (max-width:900px){
+  .menu-btn{display:inline-flex}
+  .lang{margin-left:auto}
+  nav{position:relative}
+  header[data-menu="abierto"] .navlinks{
+    display:flex;flex-direction:column;align-items:stretch;gap:0;
+    position:absolute;left:50%;transform:translateX(-50%);top:100%;width:100vw;
+    background:var(--bone);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:4px 0 12px;font-size:16px;z-index:55
+  }
+  header[data-menu="abierto"] .navlinks>a,
+  header[data-menu="abierto"] .navlinks>.tiene-menu{width:var(--shell);margin-inline:auto;padding:13px 0}
+  header[data-menu="abierto"] .navlinks>a+a,
+  header[data-menu="abierto"] .navlinks>.tiene-menu+a,
+  header[data-menu="abierto"] .navlinks>a+.tiene-menu{border-top:1px solid var(--line)}
+  header[data-menu="abierto"] .navlinks a::after{display:none}
+  /* en celular el submenu no flota: queda abierto debajo de Servicios */
+  .tiene-menu>.disparador{padding:13px 0}
+  .tiene-menu>.disparador::before{display:none}
+  .submenu{position:static;padding-top:2px;opacity:1;visibility:visible;transform:none;transition:none}
+  .submenu-caja{min-width:0;box-shadow:none;background:transparent;border:0;border-left:2px solid var(--line);padding:0 0 0 14px}
+  .submenu-caja a{padding:9px 0}
+  .submenu-caja a+a{border-top:0}
+  .sm-pie{display:none}
+}
 </style>
 </head>
 <body>
@@ -294,7 +333,7 @@ html [data-es]{transition:opacity .18s ease}
 <header>
   <nav class="shell">
     <a class="brand" href="/">ROULT</a>
-    <div class="navlinks">
+    <div class="navlinks" id="navlinks">
       <a href="/#hacemos" data-es="Qué hacemos" data-en="What we do">Qué hacemos</a>
       <div class="tiene-menu" data-abierto="no">
         <a href="/#servicios" class="disparador" aria-expanded="false" aria-haspopup="true"
@@ -321,6 +360,7 @@ html [data-es]{transition:opacity .18s ease}
     </div>
     <button class="lang" id="lang" aria-label="Change language">EN</button>
     <a class="btn sm" href="/#contacto" data-es="Hablemos" data-en="Let's talk">Hablemos</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="navlinks"><span class="menu-ico" aria-hidden="true"></span><span class="sr-only" data-es="Menú" data-en="Menu">Menú</span></button>
   </nav>
 </header>
 
@@ -623,6 +663,7 @@ document.querySelectorAll('.tiene-menu').forEach(function(caja){
     disparador.setAttribute('aria-expanded', String(abierto));
   };
   disparador.addEventListener('click', function(e){
+    if (matchMedia('(max-width:900px)').matches) return;   // en celular ya esta abierto
     if (caja.dataset.abierto !== 'si') { e.preventDefault(); poner(true); }
   });
   caja.addEventListener('keydown', function(e){
@@ -630,6 +671,25 @@ document.querySelectorAll('.tiene-menu').forEach(function(caja){
   });
   document.addEventListener('click', function(e){ if (!caja.contains(e.target)) poner(false); });
 });
+
+// menu de celular
+(function(){
+  var btn = document.querySelector('.menu-btn');
+  if (!btn) return;
+  var cab = btn.closest('header');
+  var poner = function(abierto){
+    cab.dataset.menu = abierto ? 'abierto' : 'cerrado';
+    btn.setAttribute('aria-expanded', String(abierto));
+  };
+  btn.addEventListener('click', function(){ poner(cab.dataset.menu !== 'abierto'); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && cab.dataset.menu === 'abierto') { poner(false); btn.focus(); }
+  });
+  // al tocar un enlace del panel, se cierra
+  cab.querySelectorAll('.navlinks a').forEach(function(a){
+    a.addEventListener('click', function(){ poner(false); });
+  });
+})();
 </script>
 </body>
 </html>
