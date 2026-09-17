@@ -1,0 +1,28 @@
+# Roult
+
+> Desarrollo de software a medida, sitios web y automatizaciones para mypes y
+> empresas en Perú y Estados Unidos. Contacto: contact@roult.us
+
+Roult construye sistemas internos, sitios web y automatizaciones a medida para
+negocios que hoy operan con Excel, WhatsApp y procesos manuales. Trabaja en
+español e inglés, con clientes en Perú y Estados Unidos.
+
+## Servicios
+
+- [Sitios web para negocios](https://www.roult.us/sitios-web): sitios
+  institucionales y de venta, diseñados a medida de la marca, optimizados para
+  buscadores y conversión.
+- [Software a medida](https://www.roult.us/software-a-medida): aplicaciones y
+  sistemas internos con integraciones a ERP, WhatsApp Business y pasarelas de pago.
+- [Automatizaciones](https://www.roult.us/automatizaciones): flujos que conectan
+  WhatsApp, correo, hojas de cálculo y ERP para eliminar tareas repetidas.
+
+## Productos
+
+- [Gastify](https://www.roult.us/gastify): rendición de gastos por WhatsApp,
+  validada automáticamente contra SUNAT, con panel de aprobaciones y reportes.
+
+## Más
+
+- [Inicio y preguntas frecuentes](https://www.roult.us/)
+- [Instagram](https://www.instagram.com/roult.us/)

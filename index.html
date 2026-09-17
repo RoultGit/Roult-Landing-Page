@@ -6,13 +6,13 @@
 <link rel="icon" type="image/svg+xml" href="roult-icon-4f.svg">
 <title>Roult · Software a medida y SaaS para su empresa | LatAm · US</title>
 <meta name="description" content="Desarrollo de software a medida y suscripciones SaaS para mypes y empresas en Latinoamérica y Estados Unidos.">
-<link rel="canonical" href="https://roult.us/">
+<link rel="canonical" href="https://www.roult.us/">
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://roult.us/">
+<meta property="og:url" content="https://www.roult.us/">
 <meta property="og:title" content="Roult · Software a medida y SaaS para su empresa">
 <meta property="og:description" content="Desarrollo de software a medida y una suite de productos SaaS por suscripción para mypes y empresas.">
-<meta property="og:image" content="https://roult.us/og.jpg">
+<meta property="og:image" content="https://www.roult.us/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="es_PE">
@@ -23,7 +23,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter+Tight:wght@400;500;600&family=DM+Mono:wght@400;500&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Roult","description":"Desarrollo de software a medida y suscripciones SaaS para mypes y empresas de Latinoamérica y Estados Unidos.","url":"https://roult.us/","email":"contact@roult.us","sameAs":["https://www.instagram.com/roult.us/"],"areaServed":[{"@type":"Country","name":"Peru"},{"@type":"Country","name":"United States"}],"knowsLanguage":["es","en"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Roult","description":"Desarrollo de software a medida y suscripciones SaaS para mypes y empresas de Latinoamérica y Estados Unidos.","url":"https://www.roult.us/","email":"contact@roult.us","sameAs":["https://www.instagram.com/roult.us/"],"areaServed":[{"@type":"Country","name":"Peru"},{"@type":"Country","name":"United States"}],"knowsLanguage":["es","en"]}
 </script>
 
 <script type="application/ld+json">
@@ -326,6 +326,27 @@ header.encogida .nav{height:56px}
 .navlinks a{position:relative;text-decoration:none}
 .navlinks a::after{content:"";position:absolute;left:0;bottom:-3px;height:1.5px;width:100%;background:var(--cobalt);transform:scaleX(0);transform-origin:right;transition:transform .3s cubic-bezier(.6,0,.2,1)}
 .navlinks a:hover::after{transform:scaleX(1);transform-origin:left}
+
+/* menu desplegable de Servicios */
+.navlinks{align-items:center}
+.tiene-menu{position:relative}
+.tiene-menu>.disparador{display:inline-flex;align-items:center;gap:5px}
+.tiene-menu>.disparador::before{content:"";order:1;width:5px;height:5px;margin-top:-2px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);transition:transform .18s ease;opacity:.55}
+.tiene-menu[data-abierto="si"]>.disparador::before{transform:rotate(-135deg);opacity:1}
+/* el padding-top es el puente: sin el, el menu se cierra al bajar el mouse */
+.submenu{position:absolute;top:100%;left:-16px;padding-top:14px;z-index:60;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .16s ease,transform .16s ease,visibility .16s}
+.tiene-menu[data-abierto="si"] .submenu,
+.tiene-menu:hover .submenu,
+.tiene-menu:focus-within .submenu{opacity:1;visibility:visible;transform:none}
+.tiene-menu:hover>.disparador::before{transform:rotate(-135deg);opacity:1}
+.submenu-caja{min-width:330px;background:var(--bone);border:1px solid var(--line);padding:7px;box-shadow:0 18px 44px rgba(17,19,24,.10)}
+.submenu-caja a{display:block;padding:11px 13px;text-decoration:none}
+.submenu-caja a::after{display:none}
+.submenu-caja a+a{border-top:1px solid var(--line)}
+.submenu-caja a:hover,.submenu-caja a:focus-visible{background:var(--white);outline:none}
+.sm-tit{display:block;font-family:var(--display);font-weight:700;font-size:14.5px;letter-spacing:-.2px;color:var(--ink)}
+.submenu-caja a:hover .sm-tit,.submenu-caja a:focus-visible .sm-tit{color:var(--cobalt)}
+.sm-pie{display:block;font-family:var(--body);font-size:12.5px;line-height:1.35;color:var(--ink-70);margin-top:3px}
 .btn{transition:transform .25s cubic-bezier(.2,.8,.3,1),background .15s ease,border-color .15s ease}
 html.lang-cambia [data-es]{opacity:0;transition:opacity .18s ease}
 html [data-es]{transition:opacity .18s ease}
@@ -341,7 +362,24 @@ html [data-es]{transition:opacity .18s ease}
     <a class="brand" href="#">ROULT</a>
     <div class="navlinks">
       <a href="#hacemos" data-es="Qué hacemos" data-en="What we do">Qué hacemos</a>
-      <a href="#servicios" data-es="Servicios" data-en="Services">Servicios</a>
+      <div class="tiene-menu" data-abierto="no">
+        <a href="#servicios" class="disparador" aria-expanded="false" aria-haspopup="true"
+           data-es="Servicios" data-en="Services">Servicios</a>
+        <div class="submenu"><div class="submenu-caja">
+          <a href="/sitios-web">
+            <span class="sm-tit" data-es="Sitios web para negocios" data-en="Websites for businesses">Sitios web para negocios</span>
+            <span class="sm-pie" data-es="Su negocio con dirección propia, hecha a medida." data-en="Your business with its own address, built to measure.">Su negocio con dirección propia, hecha a medida.</span>
+          </a>
+          <a href="/software-a-medida">
+            <span class="sm-tit" data-es="Software a medida" data-en="Custom software">Software a medida</span>
+            <span class="sm-pie" data-es="Sistemas internos para lo que hoy vive en Excel y WhatsApp." data-en="Internal systems for what lives in spreadsheets and chats today.">Sistemas internos para lo que hoy vive en Excel y WhatsApp.</span>
+          </a>
+          <a href="/automatizaciones">
+            <span class="sm-tit" data-es="Automatizaciones" data-en="Automations">Automatizaciones</span>
+            <span class="sm-pie" data-es="Que las tareas repetidas dejen de hacerse a mano." data-en="So repeated tasks stop being done by hand.">Que las tareas repetidas dejen de hacerse a mano.</span>
+          </a>
+        </div></div>
+      </div>
       <a href="#productos" data-es="Productos" data-en="Products">Productos</a>
       <a href="#proceso" data-es="Cómo trabajamos" data-en="How we work">Cómo trabajamos</a>
       <a href="#faq" data-es="Preguntas" data-en="FAQ">Preguntas</a>
@@ -424,7 +462,7 @@ html [data-es]{transition:opacity .18s ease}
         </ul>
         <div class="time" data-es="PROPUESTA EN 5 DÍAS HÁBILES" data-en="PROPOSAL IN 5 BUSINESS DAYS">PROPUESTA EN 5 DÍAS HÁBILES</div>
         <div class="product-cta">
-          <a class="btn ghost sm" href="/software-a-medida.html" data-es="Ver más" data-en="Learn more">Ver más</a>
+          <a class="btn ghost sm" href="/software-a-medida" data-es="Ver software a medida" data-en="See custom software">Ver software a medida</a>
         </div>
       </div>
       <div class="pane rev">
@@ -462,7 +500,7 @@ html [data-es]{transition:opacity .18s ease}
         </ul>
         <div class="time" data-es="ENTREGA EN 2 A 4 SEMANAS" data-en="DELIVERED IN 2 TO 4 WEEKS">ENTREGA EN 2 A 4 SEMANAS</div>
         <div class="product-cta">
-          <a class="btn ghost sm" href="/sitios-web.html" data-es="Ver más" data-en="Learn more">Ver más</a>
+          <a class="btn ghost sm" href="/sitios-web" data-es="Ver sitios web para negocios" data-en="See websites for businesses">Ver sitios web para negocios</a>
         </div>
       </div>
       <div class="pane rev">
@@ -476,7 +514,7 @@ html [data-es]{transition:opacity .18s ease}
         </ul>
         <div class="time" data-es="IMPLEMENTACIÓN SEGÚN ALCANCE" data-en="IMPLEMENTATION BY SCOPE">IMPLEMENTACIÓN SEGÚN ALCANCE</div>
         <div class="product-cta">
-          <a class="btn ghost sm" href="/automatizaciones.html" data-es="Ver más" data-en="Learn more">Ver más</a>
+          <a class="btn ghost sm" href="/automatizaciones" data-es="Ver automatizaciones" data-en="See automations">Ver automatizaciones</a>
         </div>
       </div>
     </div>
@@ -503,7 +541,7 @@ html [data-es]{transition:opacity .18s ease}
         </ul>
         <div class="product-cta">
           <a class="btn ghost sm" href="mailto:contact@roult.us?subject=Quiero%20una%20demo%20de%20Gastify" data-es="Agendar una demo" data-en="Book a demo">Agendar una demo</a>
-          <a class="btn ghost sm" href="/gastify.html" data-es="Ver más" data-en="Learn more">Ver más</a>
+          <a class="btn ghost sm" href="/gastify" data-es="Ver Gastify" data-en="See Gastify">Ver Gastify</a>
         </div>
       </div>
       <div class="product-shot">
@@ -654,7 +692,7 @@ html [data-es]{transition:opacity .18s ease}
         <textarea id="c-mensaje" name="Mensaje" rows="3" placeholder="Cómo se llama su empresa, a qué se dedica y qué necesita" data-ph-es="Cómo se llama su empresa, a qué se dedica y qué necesita" data-ph-en="Your company's name, what it does and what you need" required></textarea>
       </div>
       <button class="btn" type="submit" data-es="Enviar mensaje" data-en="Send message">Enviar mensaje</button>
-      <p class="mini-aviso" data-es="Al escribirnos, acepta nuestra <a href='privacidad.html'>política de privacidad</a>." data-en="By writing you accept our <a href='privacidad.html'>privacy policy</a>.">Al escribirnos, acepta nuestra <a href="privacidad.html">política de privacidad</a>.</p>
+      <p class="mini-aviso" data-es="Al escribirnos, acepta nuestra <a href='/privacidad'>política de privacidad</a>." data-en="By writing you accept our <a href='/privacidad'>privacy policy</a>.">Al escribirnos, acepta nuestra <a href="/privacidad">política de privacidad</a>.</p>
     </form>
   </div>
 </section>
@@ -667,7 +705,7 @@ html [data-es]{transition:opacity .18s ease}
     <div class="foot-meta" data-es="LatAm y Estados Unidos" data-en="LatAm and the United States">LatAm y Estados Unidos</div>
     <div class="foot-links">
       <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
-      <a href="privacidad.html" data-es="Privacidad" data-en="Privacy">Privacidad</a>
+      <a href="/privacidad" data-es="Privacidad" data-en="Privacy">Privacidad</a>
     </div>
   </div>
 </footer>
@@ -841,6 +879,22 @@ btn.addEventListener('click',function(){ setLang(lang==='es'?'en':'es', true); }
 // inglés, LatAm en español); sin llamada a servicio de geolocalización por IP.
 var idiomaNavegador = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
 if(idiomaNavegador.indexOf('en')===0) setLang('en', false);
+
+// menu desplegable: primer toque abre (sin hover no hay tactil); Escape y clic fuera cierran
+document.querySelectorAll('.tiene-menu').forEach(function(caja){
+  var disparador = caja.querySelector('.disparador');
+  var poner = function(abierto){
+    caja.dataset.abierto = abierto ? 'si' : 'no';
+    disparador.setAttribute('aria-expanded', String(abierto));
+  };
+  disparador.addEventListener('click', function(e){
+    if (caja.dataset.abierto !== 'si') { e.preventDefault(); poner(true); }
+  });
+  caja.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') { poner(false); disparador.focus(); }
+  });
+  document.addEventListener('click', function(e){ if (!caja.contains(e.target)) poner(false); });
+});
 </script>
 </body>
 </html>
