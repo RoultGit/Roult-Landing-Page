@@ -333,6 +333,8 @@ header.solid,header.open{background:#fff;box-shadow:0 1px 0 var(--line)}
 .case .media{border-radius:24px;overflow:hidden;background:var(--soft);aspect-ratio:1/1}
 .case .media img,.case .media video{width:100%;height:100%;object-fit:cover;object-position:top left}
 .case .info{padding:28px 30px;display:flex;flex-direction:column}
+.case .ci-app{background:none}
+.case .ci-app svg{width:100%;height:100%;display:block}
 .case .ci{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:24px}
 .case h3{font-size:34px;margin-top:34px}
 .case .k{color:var(--mute);margin-top:8px}
@@ -518,6 +520,7 @@ html{scroll-padding-top:150px}
 .read .ph{width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:14px;transition:transform .4s var(--ease),background .3s}
 .post:hover .read .ph{transform:rotate(-45deg);background:var(--blue)}
 .post.soon{grid-column:span 2;background:repeating-linear-gradient(-45deg,transparent 0 14px,rgb(0 0 0 / .025) 14px 28px);box-shadow:none;border:2px dashed var(--line);flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:16px;padding:40px;cursor:default}
+.post.soon:nth-child(3){grid-column:auto}
 .post.soon:hover{transform:none;box-shadow:none;border-color:#c3c8cc}
 .post.soon .ph-big{width:72px;height:72px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:32px;color:var(--mute);box-shadow:0 10px 24px -14px rgb(0 0 0 / .3)}
 .post.soon h3{font-size:24px}
@@ -636,7 +639,7 @@ html{scroll-padding-top:150px}
               <div class="m-h">Suite Roult</div>
               <a class="mi" style="--i:0" href="/gastify" data-img="productos/gastify/gastify-dashboard.jpg" data-cap="Rendición de gastos por WhatsApp, validada con SUNAT."><div class="mi-ic" style="background:#1868db"><i class="ph ph-receipt"></i></div><div><b>Gastify</b><span>Boletas por WhatsApp, validadas y listas para aprobar.</span></div></a>
               <a class="mi" style="--i:1" href="#caso-crm" data-img="capturas/crm-dashboard.jpg" data-cap="Pipeline, tareas y calendario de su equipo comercial."><div class="mi-ic app-ic"><svg viewBox="0 0 100 100" role="img" aria-label="roult CRM"><rect width="100" height="100" rx="22" fill="#F0244F"/><g transform="translate(24.29 27) scale(2.0909)" fill="#FFFFFF"><use href="#roult-mark"/></g></svg></div><div><b><span class="roult-logo roult-logo--crm" role="img" aria-label="roult CRM" style="font-size:18px"><svg class="roult-logo__mark" viewBox="0 0 24.59 22" aria-hidden="true"><use href="#roult-mark"/></svg><span class="roult-logo__name" aria-hidden="true">roult</span><span class="roult-logo__sep"></span><span class="roult-logo__prod" aria-hidden="true">CRM</span></span></b><span>Clientes, oportunidades y seguimiento en un solo lugar.</span></div></a>
-              <a class="mi" style="--i:2" href="/#productos" data-img="capturas/crm-calendario.jpg" data-cap="Inventario, compras y facturación. En desarrollo."><div class="mi-ic app-ic"><svg viewBox="0 0 100 100" role="img" aria-label="roult ERP"><rect width="100" height="100" rx="22" fill="#B8E34A"/><g transform="translate(24.29 27) scale(2.0909)" fill="#0A0B0D"><use href="#roult-mark"/></g></svg></div><div><b class="on-light"><span class="roult-logo roult-logo--erp" role="img" aria-label="roult ERP" style="font-size:18px"><svg class="roult-logo__mark" viewBox="0 0 24.59 22" aria-hidden="true"><use href="#roult-mark"/></svg><span class="roult-logo__name" aria-hidden="true">roult</span><span class="roult-logo__sep"></span><span class="roult-logo__prod" aria-hidden="true">ERP</span></span> <span class="tag">Pronto</span></b><span>Inventario, compras y facturación conectados.</span></div></a>
+              <a class="mi" style="--i:2" href="#caso-erp" data-img="capturas/erp-resumen.jpg" data-cap="roult ERP: ventas, facturación electrónica, inventario y cobranzas en un solo sistema."><div class="mi-ic app-ic"><svg viewBox="0 0 100 100" role="img" aria-label="roult ERP"><rect width="100" height="100" rx="22" fill="#B8E34A"/><g transform="translate(24.29 27) scale(2.0909)" fill="#0A0B0D"><use href="#roult-mark"/></g></svg></div><div><b class="on-light"><span class="roult-logo roult-logo--erp" role="img" aria-label="roult ERP" style="font-size:18px"><svg class="roult-logo__mark" viewBox="0 0 24.59 22" aria-hidden="true"><use href="#roult-mark"/></svg><span class="roult-logo__name" aria-hidden="true">roult</span><span class="roult-logo__sep"></span><span class="roult-logo__prod" aria-hidden="true">ERP</span></span></b><span>Inventario, compras y facturación conectados.</span></div></a>
               <a class="allp" href="/#productos">Ver todos los productos <i class="ph ph-arrow-right"></i></a>
             </div>
             <div class="pv mi" style="--i:3;display:flex;padding:0;margin:0" aria-hidden="true">
@@ -753,7 +756,18 @@ html{scroll-padding-top:150px}
           <span class="read">Leer caso <i class="ph ph-arrow-right"></i></span>
         </div>
       </button>
-      <div class="post soon rv" style="--i:1">
+      <button class="post rv" style="--i:1" data-caso="caso-erp">
+        <div class="media" style="--tint:#e6f4c4">
+          <div class="bw"><div class="bw-bar"><i></i><i></i><i></i></div><img src="capturas/erp-resumen.jpg" alt="Resumen de roult ERP" loading="lazy"></div>
+        </div>
+        <div class="pb">
+          <div class="plogo on-light"><span class="roult-logo roult-logo--erp" style="font-size:24px"><svg class="roult-logo__mark" viewBox="0 0 24.59 22" aria-hidden="true"><use href="#roult-mark"/></svg><span class="roult-logo__name">roult</span><span class="roult-logo__sep"></span><span class="roult-logo__prod">ERP</span></span></div>
+          <h3>Ventas, facturación SUNAT, inventario y cobranzas en un solo sistema</h3>
+          <div class="tags"><span>Producto propio</span><span>Facturación electrónica</span><span>Kardex</span></div>
+          <span class="read">Leer caso <i class="ph ph-arrow-right"></i></span>
+        </div>
+      </button>
+      <div class="post soon rv" style="--i:2">
         <i class="ph ph-hourglass-medium ph-big"></i>
         <div><h3>Próximo proyecto en camino</h3><p>Estamos documentando el siguiente sistema. ¿Quiere que el próximo sea el suyo?</p></div>
         <button class="pill sm" data-pop>Hablemos</button>
@@ -882,6 +896,30 @@ html{scroll-padding-top:150px}
     <figure class="wide"><img src="capturas/crm-pipeline.jpg" alt="Pipeline de ventas" loading="lazy"><figcaption>Pipeline de ventas por etapa</figcaption></figure>
     <figure><img src="capturas/crm-tareas.jpg" alt="Tablero de tareas" loading="lazy"><figcaption>Tareas del equipo</figcaption></figure>
     <figure><img src="capturas/crm-calendario.jpg" alt="Calendario compartido" loading="lazy"><figcaption>Calendario compartido</figcaption></figure>
+  </div>
+</template>
+
+<template id="caso-erp">
+  <span class="lbl" style="background:#6e5dc6">Software a medida</span>
+  <h1>roult ERP: ventas, facturación SUNAT, inventario y cobranzas en un solo sistema</h1>
+  <div class="meta"><span><i class="ph ph-cube"></i>Producto propio</span><span><i class="ph ph-buildings"></i>Empresas que compran, venden e importan</span><span><i class="ph ph-clock"></i>3 min de lectura</span></div>
+  <div class="r-cover"><img src="capturas/erp-resumen.jpg" alt="Resumen de roult ERP con indicadores y gráfico de 12 meses"></div>
+  <div class="r-facts"><div><small>Tipo</small><b>Producto propio</b></div><div><small>Facturación</small><b>Electrónica, SUNAT</b></div><div><small>Estado</small><b>Disponible</b></div></div>
+  <h2>El reto</h2>
+  <p>Una empresa que compra, importa, guarda stock y vende a crédito suele tener cada parte en un sistema o una hoja distinta. Para saber cuánto vendió, cuánto le deben y cuánto vale su inventario hay que juntar todo a mano.</p>
+  <h2>Qué hicimos</h2>
+  <p>Un ERP donde cada operación alimenta a las demás. Una factura emitida queda aceptada por SUNAT, registrada en cuentas por cobrar, con su asiento contable y su movimiento de almacén, sin volver a digitar nada.</p>
+  <div class="r-flow"><span><i class="ph ph-invoice"></i>Factura</span><i class="ph ph-arrow-right ar"></i><span><i class="ph ph-seal-check"></i>SUNAT</span><i class="ph ph-arrow-right ar"></i><span><i class="ph ph-hand-coins"></i>Cuentas por cobrar</span><i class="ph ph-arrow-right ar"></i><span><i class="ph ph-package"></i>Almacén</span><i class="ph ph-arrow-right ar"></i><span><i class="ph ph-book-open"></i>Contabilidad</span></div>
+  <h2>Lo que ve la gerencia</h2>
+  <p>El Resumen muestra ventas, compras, cobranzas, pagos y utilidad bruta del periodo, la posición de cuentas por cobrar y por pagar, caja y bancos, inventario valorizado, y la evolución de ventas y compras de los últimos 12 meses.</p>
+  <div class="r-chips"><span>Ventas</span><span>Facturación electrónica</span><span>Cuentas por cobrar</span><span>Compras</span><span>Importaciones</span><span>Inventario y kardex</span><span>Planillas</span><span>Asistente IA</span></div>
+  <h2>Pantallas</h2>
+  <div class="r-gal">
+    <figure class="wide"><img src="capturas/erp-ventas.jpg" alt="Documentos de venta con estado SUNAT" loading="lazy"><figcaption>Documentos de venta con su estado en SUNAT</figcaption></figure>
+    <figure><img src="capturas/erp-factura.jpg" alt="Factura aceptada por SUNAT" loading="lazy"><figcaption>Factura emitida y aceptada</figcaption></figure>
+    <figure><img src="capturas/erp-cobranzas.jpg" alt="Antigüedad de saldos" loading="lazy"><figcaption>Antigüedad de saldos por cliente</figcaption></figure>
+    <figure class="wide"><img src="capturas/erp-inventario.jpg" alt="Kardex valorizado" loading="lazy"><figcaption>Kardex valorizado con costo promedio</figcaption></figure>
+    <figure class="phone"><img src="capturas/erp-movil.jpg" alt="roult ERP en celular" loading="lazy"><figcaption>En celular</figcaption></figure>
   </div>
 </template>
 
