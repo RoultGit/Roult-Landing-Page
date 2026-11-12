@@ -250,6 +250,7 @@ header.solid,header.open{background:#fff;box-shadow:0 1px 0 var(--line)}
 .mani p.txt{font-size:clamp(28px,3.5vw,50px);font-weight:600;letter-spacing:-.04em;line-height:1.14;text-align:center;max-width:1180px;margin-inline:auto;position:relative}
 .mani .w{color:#d4d8dc;transition:color .3s}
 .mani .w.on{color:#14183a}
+.tbreak{display:none}
 .tilt{position:absolute;padding:10px 20px;border-radius:999px;color:#fff;font-size:17px;font-weight:500;letter-spacing:-.02em;white-space:nowrap;box-shadow:0 10px 24px -10px rgb(0 0 0 / .3);transform:rotate(var(--r)) scale(0);transition:transform .7s cubic-bezier(.34,1.56,.64,1)}
 .tilt.on{transform:rotate(var(--r)) scale(1)}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:130px;border-top:1px solid var(--line)}
@@ -442,7 +443,9 @@ header.solid,header.open{background:#fff;box-shadow:0 1px 0 var(--line)}
   .lg-grid{grid-template-columns:repeat(3,1fr)}
   .net-grid{grid-template-columns:1fr}
   .cl-grid{grid-template-columns:repeat(2,1fr)}
-  .tilt{display:none}
+  /* en pantallas chicas las etiquetas van en una fila bajo el texto, no encima */
+  .tbreak{display:block;height:28px}
+  .tilt{position:static;display:inline-block;margin:6px 4px;font-size:15px;padding:9px 16px;vertical-align:middle}
 }
 @media (max-width:700px){
   .wrap{width:calc(100% - 32px)}
@@ -623,6 +626,7 @@ header.solid,header.open{background:#fff;box-shadow:0 1px 0 var(--line)}
 <section class="mani">
   <div class="wrap">
     <p class="txt" id="mani">Como estudio de software no solo hacemos que las cosas se vean bien. Construimos sistemas que resuelven problemas reales, quitan trabajo manual y dejan el código a nombre de su empresa desde el primer día.
+      <span class="tbreak" aria-hidden="true"></span>
       <span class="tilt" style="--r:-6deg;left:58%;top:-34px;background:#ff5a1f">Precio cerrado por escrito</span>
       <span class="tilt" style="--r:5deg;left:2%;top:34%;background:#9b2fc4">El código es suyo</span>
       <span class="tilt" style="--r:-4deg;left:55%;top:58%;background:#7b5be0">Sin letra pequeña</span>
