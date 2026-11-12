@@ -1,3 +1,10 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/propuesta",
+      "destination": "/",
+      "permanent": false
+    }
+  ]
 }
