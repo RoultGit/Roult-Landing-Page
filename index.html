@@ -362,7 +362,7 @@ header.solid,header.open{background:#fff;box-shadow:0 1px 0 var(--line)}
 
 /* rubros: tarjetas tipo blog (Atlassian) */
 .rubros{padding:0 0 150px}
-.rubros .h2{margin-bottom:16px}
+.rubros .prods-head{align-items:end}
 .rtrack{display:grid;grid-auto-flow:column;grid-auto-columns:min(316px,78vw);gap:32px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:48px max(24px,(100vw - 1380px)/2) 10px;scroll-padding-inline:max(24px,(100vw - 1380px)/2)}
 .rtrack::-webkit-scrollbar{display:none}
 .rc{scroll-snap-align:start;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;color:#fff;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
@@ -744,7 +744,10 @@ header.solid,header.open{background:#fff;box-shadow:0 1px 0 var(--line)}
 
 <!-- RUBROS -->
 <section class="rubros" id="rubros">
-  <div class="wrap"><h2 class="h2 split" data-split>Lo que hacemos para su tipo de negocio</h2></div>
+  <div class="wrap prods-head">
+    <h2 class="h2 split" data-split>Lo que hacemos para su tipo de negocio</h2>
+    <div class="arr"><button id="rprev" aria-label="Rubro anterior" disabled><i class="ph ph-arrow-left"></i></button><button id="rnext" aria-label="Rubro siguiente"><i class="ph ph-arrow-right"></i></button></div>
+  </div>
   <div class="rtrack" id="rtrack">
     <a class="rc rv" data-r="restaurantes" href="#" data-pop style="--i:0"><div class="top" style="background:#2f4d14"><i class="ph ph-fork-knife"></i></div><div class="bot" style="background:#4b6f1f"><span class="lbl" style="color:#4b6f1f">Restaurantes</span><h3>Pedidos por WhatsApp, reservas en línea y caja que cuadra sola</h3><span class="go">Hablemos →</span></div></a>
     <a class="rc rv" data-r="clinicas" href="#" data-pop style="--i:1"><div class="top" style="background:#0c3a86"><i class="ph ph-first-aid-kit"></i></div><div class="bot" style="background:#1458c7"><span class="lbl" style="color:#1458c7">Clínicas</span><h3>Agenda en línea, recordatorios y historia clínica digital</h3><span class="go">Hablemos →</span></div></a>
@@ -1002,12 +1005,17 @@ pbox.addEventListener('mouseenter', function(){ pbox.classList.add('paused'); })
 pbox.addEventListener('mouseleave', function(){ pbox.classList.remove('paused'); });
 loop();
 
-// carrusel de productos
-var ct = document.getElementById('ctrack'), cp = document.getElementById('cprev'), cn = document.getElementById('cnext');
-var step = function(){ return ct.querySelector('.ccard').offsetWidth + 32; };
-cp.addEventListener('click', function(){ ct.scrollBy({left:-step(), behavior: reduce?'auto':'smooth'}); });
-cn.addEventListener('click', function(){ ct.scrollBy({left: step(), behavior: reduce?'auto':'smooth'}); });
-ct.addEventListener('scroll', function(){ cp.disabled = ct.scrollLeft < 8; cn.disabled = ct.scrollLeft + ct.clientWidth >= ct.scrollWidth - 8; }, {passive:true});
+// carruseles con flechas (productos y rubros)
+function carrusel(trackId, prevId, nextId){
+  var t = document.getElementById(trackId), p = document.getElementById(prevId), n = document.getElementById(nextId);
+  var step = function(){ var c = t.firstElementChild; return c.offsetWidth + parseFloat(getComputedStyle(t).columnGap || 0); };
+  var sync = function(){ p.disabled = t.scrollLeft < 8; n.disabled = t.scrollLeft + t.clientWidth >= t.scrollWidth - 8; };
+  p.addEventListener('click', function(){ t.scrollBy({left:-step(), behavior: reduce?'auto':'smooth'}); });
+  n.addEventListener('click', function(){ t.scrollBy({left: step(), behavior: reduce?'auto':'smooth'}); });
+  t.addEventListener('scroll', sync, {passive:true}); addEventListener('resize', sync); sync();
+}
+carrusel('ctrack','cprev','cnext');
+carrusel('rtrack','rprev','rnext');
 
 // contadores
 var cio = new IntersectionObserver(function(es){ es.forEach(function(e){
