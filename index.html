@@ -29,6 +29,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Schibsted+Grotesk:wght@900&family=Tomorrow:wght@600&family=Bricolage+Grotesque:opsz,wght@12..96,800&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="i18n.js"></script>
 <style>
 :root{
   --bg:#f7f9f9; --white:#fff; --ink:#0b0b0c; --ink-2:#2b2d31; --mute:#5c6168; --soft:#eef1f1; --line:#e3e6e6;
@@ -38,6 +39,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;background:var(--ink)}
+.i18n-wait body{visibility:hidden}
 /* Lenis (scroll suave, mismo lerp .1 que Orbix) */
 html.lenis,html.lenis body{height:auto}
 .lenis.lenis-smooth{scroll-behavior:auto !important}
@@ -552,6 +554,7 @@ header.solid,header.open{background:#fff;box-shadow:0 1px 0 var(--line)}
     </nav>
     <div class="bar-r">
       
+      <button class="lang" id="lang" type="button" aria-label="Read in English">EN</button>
       <button class="pill sm" data-pop>Hablemos</button>
       <button class="burger" aria-label="Menú" aria-expanded="false"><i class="ph ph-list"></i></button>
     </div>
@@ -856,6 +859,15 @@ header.solid,header.open{background:#fff;box-shadow:0 1px 0 var(--line)}
 <script>
 (function(){
 var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+// idioma: se traduce antes de que el resto del script parta los titulares en letras
+var i18n = window.roultI18n || {lang:'es', T:function(s){ return s; }, apply:function(){}, toggle:function(){}};
+i18n.apply(document.body);
+var langBtn = document.getElementById('lang');
+if(langBtn){
+  langBtn.textContent = i18n.lang === 'en' ? 'ES' : 'EN';
+  langBtn.setAttribute('aria-label', i18n.lang === 'en' ? 'Ver en español' : 'Read in English');
+  langBtn.addEventListener('click', i18n.toggle);
+}
 var narrow = function(){ return matchMedia('(max-width:1080px)').matches; };
 var cab = document.getElementById('cab');
 var lenis = (!reduce && window.Lenis) ? new Lenis({lerp:.1, smoothWheel:true}) : null;
@@ -1005,8 +1017,8 @@ function showStep(i){
   setTimeout(function(){
     var s = steps[i];
     pcard.querySelector('.ph-big').className = 'ph '+s.ic+' ph-big';
-    pcard.querySelector('h3').textContent = s.t; pcard.querySelector('p').textContent = s.p;
-    pcard.querySelector('.when span').textContent = s.w; pcard.querySelector('.pc-img img').src = s.img;
+    pcard.querySelector('h3').textContent = i18n.T(s.t); pcard.querySelector('p').textContent = i18n.T(s.p);
+    pcard.querySelector('.when span').textContent = i18n.T(s.w); pcard.querySelector('.pc-img img').src = s.img;
     pcard.classList.remove('swap');
   }, 300);
 }
