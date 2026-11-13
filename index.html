@@ -214,11 +214,14 @@ header.solid,header.open{background:#fff;box-shadow:0 1px 0 var(--line)}
 .socials a:hover{transform:translateY(-3px)}
 
 /* clientes: celdas que giran (Orbix) */
-.cl-grid{grid-template-columns:repeat(4,1fr);perspective:1000px}
-.cl-grid .lg{overflow:hidden}
-.cl-in{display:grid;place-items:center;width:100%;height:100%;backface-visibility:hidden;will-change:transform}
-.cl-in img{height:52px;width:auto;max-width:72%;object-fit:contain}
-@media (max-width:700px){.cl-in img{height:34px;max-width:80%}}
+/* cada celda es una carta de dos caras: el logo siguiente espera en la cara oculta y la carta da media vuelta */
+.cl-grid{grid-template-columns:repeat(4,1fr)}
+.cl-grid .lg{perspective:900px}
+.cl-card{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.65,0,.35,1);will-change:transform}
+.cl-face{position:absolute;inset:0;display:grid;place-items:center;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.cl-face.back{transform:rotateY(180deg)}
+.cl-face img{height:52px;width:auto;max-width:72%;object-fit:contain;-webkit-user-drag:none}
+@media (max-width:700px){.cl-face img{height:34px;max-width:80%}}
 .wmk{display:flex;align-items:center;gap:10px;color:#17181c;white-space:nowrap}
 .wmk .ph{font-size:30px}
 
@@ -1056,26 +1059,43 @@ var clientes = [
   {n:'Florerías Unidas', mk:'<span class="wmk" style="font:italic 600 26px Inter Tight;letter-spacing:-.03em"><i class="ph-fill ph-flower-lotus" style="color:#e0469b"></i>Florerías Unidas</span>'}
 ];
 var clgrid = document.getElementById('clgrid');
-function clHTML(c){ return c.img ? '<img src="'+c.img+'" alt="'+c.n+'" loading="lazy">' : c.mk; }
-var CELLS = Math.min(4, clientes.length), shown = [];
+function clHTML(c){ return c.img ? '<img src="'+c.img+'" alt="" decoding="async" draggable="false">' : c.mk; }
+var CELLS = Math.min(4, clientes.length), cards = [];
 for(var ci = 0; ci < CELLS; ci++){
   var cell = document.createElement('div'); cell.className = 'lg'; cell.style.setProperty('--i', ci);
-  cell.innerHTML = '<div class="cl-in" role="img" aria-label="'+clientes[ci].n+'">'+clHTML(clientes[ci])+'</div>';
-  clgrid.appendChild(cell); shown.push(ci);
+  cell.innerHTML = '<div class="cl-card" role="img" aria-label="'+clientes[ci].n+'"><div class="cl-face front">'+clHTML(clientes[ci])+'</div><div class="cl-face back"></div></div>';
+  clgrid.appendChild(cell);
+  cards.push({el: cell.firstElementChild, shown: ci, angle: 0, busy: false});
 }
-var lastCell = -1, clVisible = false;
-new IntersectionObserver(function(e){ clVisible = e[0].isIntersecting; }).observe(clgrid);
+// todos los logos se descargan y decodifican antes del primer giro: nunca aparece una cara en blanco
+var preload = Promise.all(clientes.filter(function(c){ return c.img; }).map(function(c){
+  var im = new Image(); im.src = c.img; return im.decode ? im.decode().catch(function(){}) : Promise.resolve();
+}));
+var lastCell = -1, clVisible = false, clTimer = null;
 function flipOne(){
-  if(!clVisible || document.hidden || clientes.length <= CELLS) return;
-  var k; do { k = Math.floor(Math.random()*CELLS); } while(k === lastCell && CELLS > 1); lastCell = k;
-  var free = clientes.map(function(_,i){ return i; }).filter(function(i){ return shown.indexOf(i) < 0; });
-  var next = free[Math.floor(Math.random()*free.length)], inner = clgrid.children[k].firstElementChild;
-  inner.animate([{transform:'rotateY(0)'},{transform:'rotateY(90deg)'}], {duration:380, easing:'cubic-bezier(.5,0,.75,0)', fill:'forwards'}).onfinish = function(){
-    inner.innerHTML = clHTML(clientes[next]); inner.setAttribute('aria-label', clientes[next].n); shown[k] = next;
-    inner.animate([{transform:'rotateY(-90deg)'},{transform:'rotateY(0)'}], {duration:620, easing:'cubic-bezier(.16,1,.3,1)', fill:'forwards'});
-  };
+  var idle = cards.filter(function(c, k){ return !c.busy && k !== lastCell; });
+  if(!idle.length) return;
+  var c = idle[Math.floor(Math.random()*idle.length)], k = cards.indexOf(c); lastCell = k;
+  var shownNow = cards.map(function(x){ return x.shown; });
+  var free = clientes.map(function(_,i){ return i; }).filter(function(i){ return shownNow.indexOf(i) < 0; });
+  if(!free.length) return;
+  var next = free[Math.floor(Math.random()*free.length)];
+  var hidden = c.el.children[(c.angle / 180) % 2 === 0 ? 1 : 0];   // la cara que hoy no se ve
+  hidden.innerHTML = clHTML(clientes[next]);
+  c.busy = true; c.shown = next; c.angle += 180;
+  requestAnimationFrame(function(){ c.el.style.transform = 'rotateY(' + c.angle + 'deg)'; });
+  c.el.setAttribute('aria-label', clientes[next].n);
+  setTimeout(function(){ c.busy = false; }, 1050);
 }
-if(!reduce) setInterval(flipOne, 1700);
+// un giro cada 1,8 s, solo mientras la sección se ve y la pestaña está activa (setTimeout encadenado: no se acumulan)
+function tick(){ clTimer = null; if(!clVisible || document.hidden) return; flipOne(); clTimer = setTimeout(tick, 1800); }
+function startFlips(){ if(!clTimer && clVisible && !document.hidden) clTimer = setTimeout(tick, 1200); }
+if(!reduce && clientes.length > CELLS){
+  preload.then(function(){
+    new IntersectionObserver(function(e){ clVisible = e[0].isIntersecting; if(clVisible) startFlips(); }, {threshold:.3}).observe(clgrid);
+    document.addEventListener('visibilitychange', startFlips);
+  });
+}
 
 // ── mapa de conexiones: nodos, líneas punteadas y datos viajando (SVG <animateMotion>, muy barato) ──
 var NS = 'http://www.w3.org/2000/svg', netmap = document.getElementById('netmap');

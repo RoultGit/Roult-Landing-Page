@@ -210,11 +210,14 @@ header.solid,header.open{background:#fff;box-shadow:0 1px 0 var(--line)}
 .socials a:hover{transform:translateY(-3px)}
 
 /* clientes: celdas que giran (Orbix) */
-.cl-grid{grid-template-columns:repeat(4,1fr);perspective:1000px}
-.cl-grid .lg{overflow:hidden}
-.cl-in{display:grid;place-items:center;width:100%;height:100%;backface-visibility:hidden;will-change:transform}
-.cl-in img{height:52px;width:auto;max-width:72%;object-fit:contain}
-@media (max-width:700px){.cl-in img{height:34px;max-width:80%}}
+/* cada celda es una carta de dos caras: el logo siguiente espera en la cara oculta y la carta da media vuelta */
+.cl-grid{grid-template-columns:repeat(4,1fr)}
+.cl-grid .lg{perspective:900px}
+.cl-card{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.65,0,.35,1);will-change:transform}
+.cl-face{position:absolute;inset:0;display:grid;place-items:center;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.cl-face.back{transform:rotateY(180deg)}
+.cl-face img{height:52px;width:auto;max-width:72%;object-fit:contain;-webkit-user-drag:none}
+@media (max-width:700px){.cl-face img{height:34px;max-width:80%}}
 .wmk{display:flex;align-items:center;gap:10px;color:#17181c;white-space:nowrap}
 .wmk .ph{font-size:30px}
 
