@@ -7,6 +7,9 @@
 <title>Sitios web para negocios · Roult</title>
 <meta name="description" content="Sitios institucionales o de ventas, diseñados y desarrollados a la medida de su marca. Optimizados para buscadores y conversión. Entrega en 2 a 4 semanas.">
 <link rel="canonical" href="https://www.roult.us/sitios-web">
+<link rel="alternate" hreflang="es" href="https://www.roult.us/sitios-web">
+<link rel="alternate" hreflang="en" href="https://www.roult.us/en/websites">
+<link rel="alternate" hreflang="x-default" href="https://www.roult.us/sitios-web">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.roult.us/sitios-web">
@@ -15,16 +18,47 @@
 <meta property="og:image" content="https://www.roult.us/og-roult.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:locale" content="es_PE">
+<meta property="og:locale" content="es_LA">
+<meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter+Tight:wght@400;500;600&family=DM+Mono:wght@400;500&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","serviceType":"Diseño y desarrollo de sitios web","provider":{"@type":"ProfessionalService","name":"Roult","url":"https://www.roult.us/"},"areaServed":[{"@type":"Country","name":"Peru"},{"@type":"Country","name":"United States"}],"description":"Sitios institucionales y de ventas diseñados y desarrollados a la medida de la marca de cada negocio, optimizados para buscadores y conversión."}
-</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Diseño y desarrollo de sitios web",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Roult",
+    "url": "https://www.roult.us/"
+  },
+  "areaServed": [
+    {
+      "@type": "AdministrativeArea",
+      "name": "Miami-Dade County, FL"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Broward County, FL"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Palm Beach County, FL"
+    },
+    {
+      "@type": "Country",
+      "name": "United States"
+    },
+    {
+      "@type": "Country",
+      "name": "Peru"
+    }
+  ],
+  "description": "Sitios institucionales y de ventas diseñados y desarrollados a la medida de la marca de cada negocio, optimizados para buscadores y conversión."
+}</script>
 <style>
 :root{
   --ink:#111318;
@@ -646,13 +680,13 @@ function setLang(l, animate){
     aplicar();
   }
 }
-btn.addEventListener('click',function(){ setLang(lang==='es'?'en':'es', true); });
+btn.addEventListener('click',function(){ location.href='/en/websites'+location.hash; });
 
 // ── idioma por defecto según el navegador del visitante ──
 // ponytail: navigator.language como proxy de país (EE.UU. navega mayormente en
 // inglés, LatAm en español); sin llamada a servicio de geolocalización por IP.
 var idiomaNavegador = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
-if(idiomaNavegador.indexOf('en')===0) setLang('en', false);
+/* idioma fijo por URL: el inglés vive en /en */
 
 // menu desplegable: primer toque abre (sin hover no hay tactil); Escape y clic fuera cierran
 document.querySelectorAll('.tiene-menu').forEach(function(caja){

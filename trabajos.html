@@ -7,6 +7,9 @@
 <title>Trabajos · Roult</title>
 <meta name="description" content="Proyectos que Roult diseñó, construyó y puso en producción: la web de ACIS, Gastify y RoultCRM. Qué se construyó y con qué se resolvió cada uno.">
 <link rel="canonical" href="https://www.roult.us/trabajos">
+<link rel="alternate" hreflang="es" href="https://www.roult.us/trabajos">
+<link rel="alternate" hreflang="en" href="https://www.roult.us/en/work">
+<link rel="alternate" hreflang="x-default" href="https://www.roult.us/trabajos">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.roult.us/trabajos">
@@ -15,7 +18,8 @@
 <meta property="og:image" content="https://www.roult.us/og-roult.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:locale" content="es_PE">
+<meta property="og:locale" content="es_LA">
+<meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -732,13 +736,13 @@ function setLang(l, animate){
     aplicar();
   }
 }
-btn.addEventListener('click',function(){ setLang(lang==='es'?'en':'es', true); });
+btn.addEventListener('click',function(){ location.href='/en/work'+location.hash; });
 
 // ── idioma por defecto según el navegador del visitante ──
 // ponytail: navigator.language como proxy de país (EE.UU. navega mayormente en
 // inglés, LatAm en español); sin llamada a servicio de geolocalización por IP.
 var idiomaNavegador = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
-if(idiomaNavegador.indexOf('en')===0) setLang('en', false);
+/* idioma fijo por URL: el inglés vive en /en */
 
 // menu desplegable: primer toque abre (sin hover no hay tactil); Escape y clic fuera cierran
 document.querySelectorAll('.tiene-menu').forEach(function(caja){

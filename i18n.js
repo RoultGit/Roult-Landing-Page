@@ -3,6 +3,8 @@
    Para agregar un texto: "texto en español exacto": "English text". */
 (function(){
 var EN = {
+"Panel de Gastify con los gastos del mes": "Gastify dashboard with the month's expenses",
+"Sección de proceso del sitio de ACIS": "Process section of the ACIS website",
 "Soluciones": "Solutions",
 "Servicios": "Services",
 "Páginas web": "Websites",
@@ -360,10 +362,8 @@ var EN = {
 };
 var norm = function(s){ return s.replace(/\s+/g, ' ').trim(); };
 function pick(){
-  var q = new URLSearchParams(location.search).get('lang');
-  if(q === 'en' || q === 'es'){ try{ localStorage.setItem('roult-lang', q); }catch(e){} return q; }
-  try{ var s = localStorage.getItem('roult-lang'); if(s === 'en' || s === 'es') return s; }catch(e){}
-  return /^en/i.test(navigator.language || '') ? 'en' : 'es';
+  // el idioma sale de la URL: /en y /en/... en inglés, el resto en español
+  return /^\/en(\/|$)/.test(location.pathname) ? 'en' : 'es';
 }
 var lang = pick(), de = document.documentElement;
 de.lang = lang;
@@ -391,12 +391,12 @@ function apply(root){
     de.classList.remove('i18n-wait');
   }
 }
+var ALT = {"/": "/en", "/en": "/", "/sitios-web": "/en/websites", "/en/websites": "/sitios-web", "/software-a-medida": "/en/custom-software", "/en/custom-software": "/software-a-medida", "/automatizaciones": "/en/automation", "/en/automation": "/automatizaciones", "/gastify": "/en/gastify", "/en/gastify": "/gastify", "/trabajos": "/en/work", "/en/work": "/trabajos", "/blog": "/en/blog", "/en/blog": "/blog"};
 function toggle(){
-  var next = lang === 'en' ? 'es' : 'en';
-  try{ localStorage.setItem('roult-lang', next); }catch(e){}
-  var u = new URL(location.href);
-  if(u.searchParams.has('lang')) u.searchParams.set('lang', next);
-  if(u.searchParams.has('lang')) location.replace(u.href); else location.reload();
+  // lleva a la misma página en el otro idioma
+  var p = location.pathname.replace(/\.html$/, '').replace(/\/index$/, '/').replace(/(.)\/$/, '$1') || '/';
+  var dest = ALT[p] || (lang === 'en' ? '/' : '/en');
+  location.href = dest + location.hash;
 }
 window.roultI18n = { lang: lang, T: T, apply: apply, toggle: toggle };
 })();

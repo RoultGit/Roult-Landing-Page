@@ -1,9 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.roult.us/</loc><priority>1.0</priority></url>
-  <url><loc>https://www.roult.us/software-a-medida</loc><priority>0.8</priority></url>
-  <url><loc>https://www.roult.us/sitios-web</loc><priority>0.8</priority></url>
-  <url><loc>https://www.roult.us/automatizaciones</loc><priority>0.8</priority></url>
-  <url><loc>https://www.roult.us/gastify</loc><priority>0.8</priority></url>
-  <url><loc>https://www.roult.us/trabajos</loc><priority>0.7</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.roult.us/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/"/>
+  </url>
+  <url>
+    <loc>https://www.roult.us/en</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/"/>
+  </url>
+  <url>
+    <loc>https://www.roult.us/sitios-web</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/sitios-web"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/websites"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/sitios-web"/>
+  </url>
+  <url>
+    <loc>https://www.roult.us/en/websites</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/sitios-web"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/websites"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/sitios-web"/>
+  </url>
+  <url>
+    <loc>https://www.roult.us/software-a-medida</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/software-a-medida"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/custom-software"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/software-a-medida"/>
+  </url>
+  <url>
+    <loc>https://www.roult.us/en/custom-software</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/software-a-medida"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/custom-software"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/software-a-medida"/>
+  </url>
+  <url>
+    <loc>https://www.roult.us/automatizaciones</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/automatizaciones"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/automation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/automatizaciones"/>
+  </url>
+  <url>
+    <loc>https://www.roult.us/en/automation</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/automatizaciones"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/automation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/automatizaciones"/>
+  </url>
+  <url>
+    <loc>https://www.roult.us/gastify</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/gastify"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/gastify"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/gastify"/>
+  </url>
+  <url>
+    <loc>https://www.roult.us/en/gastify</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/gastify"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/gastify"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/gastify"/>
+  </url>
+  <url>
+    <loc>https://www.roult.us/trabajos</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/trabajos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/work"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/trabajos"/>
+  </url>
+  <url>
+    <loc>https://www.roult.us/en/work</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/trabajos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/work"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/trabajos"/>
+  </url>
+  <url>
+    <loc>https://www.roult.us/blog</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/blog"/>
+  </url>
+  <url>
+    <loc>https://www.roult.us/en/blog</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/blog"/>
+  </url>
 </urlset>
