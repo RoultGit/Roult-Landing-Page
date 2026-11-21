@@ -380,6 +380,8 @@ header[data-menu="abierto"] .menu-ico::after{transform:rotate(-45deg)}
   .submenu-caja a+a{border-top:0}
   .sm-pie{display:none}
 }
+/* las capturas apiladas sobresalen unos px en móvil */
+main{overflow-x:clip}
 </style>
 </head>
 <body>
@@ -528,22 +530,18 @@ header[data-menu="abierto"] .menu-ico::after{transform:rotate(-45deg)}
            aria-label="Pantallas del proyecto. Active para ver la siguiente.">
         <div class="frame">
           <div class="frame-bar"><i></i><i></i><i></i><span data-es="Dashboard" data-en="Dashboard">Dashboard</span></div>
-          <img src="/capturas/crm-dashboard.jpg" width="1440" height="607" loading="lazy" decoding="async" alt="Dashboard de RoultCRM: leads nuevos, deals creados, ganados y perdidos y tareas vencidas, con la evolución mensual de los deals y el reparto por resultado.">
+          <img src="/capturas/roultcrm-dashboard.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Dashboard de RoultCRM: leads nuevos, deals creados, ganados y perdidos y tareas vencidas, con la evolución mensual de los deals y el reparto por resultado.">
         </div>
         <div class="frame">
           <div class="frame-bar"><i></i><i></i><i></i><span data-es="Pipeline" data-en="Pipeline">Pipeline</span></div>
-          <img src="/capturas/crm-pipeline.jpg" width="1440" height="693" loading="lazy" decoding="async" alt="Pipeline de RoultCRM: tablero por etapas —contacto, propuesta, negociación, adelanto, producción— con cada negocio, su empresa, su monto en soles o dólares y su vendedor.">
-        </div>
-        <div class="frame">
-          <div class="frame-bar"><i></i><i></i><i></i><span data-es="Tareas" data-en="Tasks">Tareas</span></div>
-          <img src="/capturas/crm-tareas.jpg" width="1440" height="832" loading="lazy" decoding="async" alt="Tablero de tareas de RoultCRM en tres columnas —por hacer, en curso y hecha— con prioridad, fecha, barra de avance y responsable en cada ficha.">
+          <img src="/capturas/roultcrm-pipeline.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Pipeline de RoultCRM: tablero por etapas —contacto, propuesta, negociación, adelanto, producción— con cada negocio, su empresa, su monto en soles o dólares y su vendedor.">
         </div>
         <div class="frame">
           <div class="frame-bar"><i></i><i></i><i></i><span data-es="Calendario" data-en="Calendar">Calendario</span></div>
-          <img src="/capturas/crm-calendario.jpg" width="1440" height="815" loading="lazy" decoding="async" alt="Calendario mensual de RoultCRM con tareas, próximos pasos y cierres estimados distinguidos por color, y las tareas cumplidas tachadas.">
+          <img src="/capturas/roultcrm-calendario.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Calendario mensual de RoultCRM con tareas, próximos pasos y cierres estimados distinguidos por color, y las tareas cumplidas tachadas.">
         </div>
       </div>
-      <p class="pila-pie"><span class="pila-n">1/4</span><span class="pila-pista" data-es="Clic para ver la siguiente" data-en="Click for the next one">Clic para ver la siguiente</span></p>
+      <p class="pila-pie"><span class="pila-n">1/3</span><span class="pila-pista" data-es="Clic para ver la siguiente" data-en="Click for the next one">Clic para ver la siguiente</span></p>
       </div>
     </article>
 
@@ -811,5 +809,6 @@ document.querySelectorAll('.pila').forEach(function(pila){
   });
 })();
 </script>
+<script src="/roult-leads.js" defer></script>
 </body>
 </html>
