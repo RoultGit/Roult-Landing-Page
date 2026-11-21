@@ -15,48 +15,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/"/>
   </url>
   <url>
-    <loc>https://www.roult.us/sitios-web</loc>
-    <lastmod>2026-11-18</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/sitios-web"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/websites"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/sitios-web"/>
-  </url>
-  <url>
-    <loc>https://www.roult.us/en/websites</loc>
-    <lastmod>2026-11-18</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/sitios-web"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/websites"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/sitios-web"/>
-  </url>
-  <url>
-    <loc>https://www.roult.us/software-a-medida</loc>
-    <lastmod>2026-11-18</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/software-a-medida"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/custom-software"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/software-a-medida"/>
-  </url>
-  <url>
-    <loc>https://www.roult.us/en/custom-software</loc>
-    <lastmod>2026-11-18</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/software-a-medida"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/custom-software"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/software-a-medida"/>
-  </url>
-  <url>
-    <loc>https://www.roult.us/automatizaciones</loc>
-    <lastmod>2026-11-18</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/automatizaciones"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/automation"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/automatizaciones"/>
-  </url>
-  <url>
-    <loc>https://www.roult.us/en/automation</loc>
-    <lastmod>2026-11-18</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/automatizaciones"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.roult.us/en/automation"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.roult.us/automatizaciones"/>
-  </url>
-  <url>
     <loc>https://www.roult.us/gastify</loc>
     <lastmod>2026-11-18</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.roult.us/gastify"/>

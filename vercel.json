@@ -5,6 +5,36 @@
       "source": "/propuesta",
       "destination": "/",
       "permanent": false
+    },
+    {
+      "source": "/sitios-web",
+      "destination": "/blog#paginas-web",
+      "permanent": false
+    },
+    {
+      "source": "/automatizaciones",
+      "destination": "/blog#automatizaciones",
+      "permanent": false
+    },
+    {
+      "source": "/software-a-medida",
+      "destination": "/blog#software-a-medida",
+      "permanent": false
+    },
+    {
+      "source": "/en/websites",
+      "destination": "/en/blog#paginas-web",
+      "permanent": false
+    },
+    {
+      "source": "/en/automation",
+      "destination": "/en/blog#automatizaciones",
+      "permanent": false
+    },
+    {
+      "source": "/en/custom-software",
+      "destination": "/en/blog#software-a-medida",
+      "permanent": false
     }
   ]
 }
